@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Online_Food_Ordering", "Online_Food_Ordering.csproj", "{9BB63325-8A0E-4208-94BC-BCB4F8D4D763}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{646C7E2E-88B7-4B2A-A1DA-3384FBF88D4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "..\BAL\BAL.csproj", "{B6B923F9-CA73-449B-8FA6-9F2C7E570D7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BB63325-8A0E-4208-94BC-BCB4F8D4D763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB63325-8A0E-4208-94BC-BCB4F8D4D763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB63325-8A0E-4208-94BC-BCB4F8D4D763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB63325-8A0E-4208-94BC-BCB4F8D4D763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646C7E2E-88B7-4B2A-A1DA-3384FBF88D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646C7E2E-88B7-4B2A-A1DA-3384FBF88D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646C7E2E-88B7-4B2A-A1DA-3384FBF88D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646C7E2E-88B7-4B2A-A1DA-3384FBF88D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B923F9-CA73-449B-8FA6-9F2C7E570D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B923F9-CA73-449B-8FA6-9F2C7E570D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B923F9-CA73-449B-8FA6-9F2C7E570D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B923F9-CA73-449B-8FA6-9F2C7E570D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70FB2E36-EBDF-4ED9-B71F-4FED09543FC8}
+	EndGlobalSection
+EndGlobal
