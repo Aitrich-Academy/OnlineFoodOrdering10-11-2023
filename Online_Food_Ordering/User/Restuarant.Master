@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Restuarant.master.cs" Inherits="Online_Food_Ordering.User.Restuarant" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="UserStyle/UserStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #menu {
+            height: 60px;
+            width: 943px;
+            margin-left: 169px;
+              border-radius: 100px;
+            margin-top: 0px;
+        }
+        .auto-style1 {
+            width: 158px;
+            height: 152px;
+            margin-left: 0px;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body id ="masterbdy">
+    <form id="form1" runat="server">
+
+         <img class="auto-style1" src="images/nirvana%20indic%20original%20logo.png" />
+      
+        <div id="menu">
+              
+              <asp:Button ID="homebtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 15px; margin-top: 20px" Text="Home" Width="89px" />
+             <asp:Button ID="Accnbtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 45px; margin-top: 20px" Text="Account" Width="122px" />
+
+             <asp:Button ID="viewctgrybtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 64px; margin-top: 20px" Text="Categories" Width="107px" />
+
+            <asp:Button ID="Searchnvgtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 33px; margin-top: 20px" Text="Search" Width="126px" />
+
+           
+             <asp:Button ID="viewcartbtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 12px; margin-top: 20px" Text="Cart" Width="126px" />
+
+             <asp:Button ID="logoutbtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 36px; margin-top: 20px" Text="Logout" Width="126px" />
+
+           
+              </div>
+
+
+
+            
+
+
+
+              <div>
+                  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                  </asp:ContentPlaceHolder>
+                </div>
+          </form>
+       
+</body>
+</html>
