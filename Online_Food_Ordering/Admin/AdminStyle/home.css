@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.form-container {
+    max-width: 600px; /* Adjust the maximum width as needed */
+    margin: 20px auto; /* Center the form container */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Adjust the space between columns */
+}
+
+.form-column {
+    flex: 1; /* Adjust to control the width of each column */
+    margin-right: 10px; /* Adjust the margin between columns */
+}
+
+    .form-column label {
+        display: block; /* Ensures labels appear on a new line */
+        margin-bottom: 5px; /* Adjust the margin between label and textbox */
+    }
+
