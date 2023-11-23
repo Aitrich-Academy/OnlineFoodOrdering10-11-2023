@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="Online_Food_Ordering.Admin.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="AdminStyle/default.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+    
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="applogo">
+            <asp:Image ID="ImageAppLogo" runat="server" ImageUrl="~/Image/Applogo.png" Height="200px" Width="200px"/>
+        </div>
+        <div id="navigationmenu" >
+            <asp:Button ID="BtnHome" runat="server" Text="Home" CssClass="btnHome"   OnClick="BtnHome_Click" /> 
+            <asp:Button ID="BtnCustomers" runat="server" Text="Customers"  CssClass="btnCustomers" OnClick="BtnCustomers_Click" />
+            <asp:Button ID="BtnOrder" runat="server" Text="Orders" CssClass="btnOrder" OnClick="BtnOrder_Click"  />
+            <asp:Button ID="BtnCategories" runat="server" Text="Categories" CssClass="btnCategories" OnClick="BtnCategories_Click"  />
+            <asp:Button ID="BtnLogout" runat="server" Text="Logout"  CssClass="btnLogout" /> 
+        </div>
+
+        <div id="MainContentDiv" style="height:250%; width:90%; margin:5px; " >
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"  >
+
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="logodiv">
+        <asp:Image ID="ImageAdminLogo" runat="server" Height="80px" Width="170px"  ImageUrl="~/Image/admin.png" />
+        </div>
+
+    </form>
+</body>
+</html>

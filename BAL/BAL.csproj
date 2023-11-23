@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Manager\CategoryManager.cs" />
+    <Compile Include="Admin\Manager\DishManager.cs" />
+    <Compile Include="Admin\Manager\UserManager.cs" />
+    <Compile Include="Admin\Property\CategoryProperty.cs" />
+    <Compile Include="Admin\Property\DishProperty.cs" />
+    <Compile Include="Admin\Property\UserProperty.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,5 +56,6 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
