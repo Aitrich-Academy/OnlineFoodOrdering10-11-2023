@@ -1,0 +1,481 @@
+﻿
+
+/*body {
+    background-image: url('../images/website%20white%20background%20theme.png');
+    
+    box-sizing: border-box;
+    
+    width:1010px;
+    height: 746px;
+    position: relative;
+    background-repeat: no-repeat;
+    top: 101px;
+    left: 0px;
+    margin-right: 125px;
+    margin-left: 0px;
+    }
+*/
+body {
+    background-image: url('../images/website%20white%20background%20theme.png');
+    background-size: cover; /* Ensures the image covers the full area */
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin: 20px 0 0 9px; /* Removes default margins */
+    height: 572px; /* Ensures at least full viewport height */
+    width: 1151px; /* Ensures full viewport width */
+}
+#RestaurantCnct {
+    background-image: url('../images/dalle2~1.png');
+    background-size: cover; /* Ensures the image covers the full area */
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin: 0; /* Removes default margins */
+    height: 906px; /* Ensures at least full viewport height */
+    width: 100vw; /* Ensures full viewport width */
+}
+
+#homeiconpng {
+    display: inline-block; /* or block, depending on layout */
+    width: 49px; /* Adjust as needed */
+    height: 44px; /* Adjust as needed */
+    /* Path to your icon image */
+    background-size: cover; /* This will make sure the image covers the entire area */
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px; /* Hides the text "Home" */
+}
+
+
+
+#masterbdy{
+
+
+    background-image:none;
+}
+
+
+
+
+
+#main li {
+    display: inline-block; /* Display items inline */
+   
+   
+}
+#menu {
+    background-image: url('../images/banner2.png');
+}
+    #main li a
+    {
+        display: block; /* Style each link as a block */
+        padding: 0 15px; /* Padding on left and right */
+        text-decoration: none; /* Removes underline from links */
+        color: #000;
+    width: 905px;
+    margin-left: 223px;
+    height: 296px;
+    margin-top: 67px;
+}
+
+#homebtn {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove the border */
+    color: #000; /* Text color, change as needed */
+    /* Add other styling as needed, such as padding, font, etc. */
+    font: 700 20px "Volkhov-bold";
+}
+
+#Accnbtn {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove the border */
+    color: #000; /* Text color, change as needed */
+    /* Add other styling as needed, such as padding, font, etc. */
+    font: 700 20px "Volkhov-bold";
+}
+
+#viewctgrybtn {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove the border */
+    color: #000; /* Text color, change as needed */
+    /* Add other styling as needed, such as padding, font, etc. */
+    font: 700 20px "Volkhov-bold";
+}
+
+
+
+#logoutbtn {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove the border */
+    color: #000; /* Text color, change as needed */
+    /* Add other styling as needed, such as padding, font, etc. */
+    font: 700 20px "Volkhov-bold";
+}
+
+#Searchnvgtn {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove the border */
+    color: #000; /* Text color, change as needed */
+    /* Add other styling as needed, such as padding, font, etc. */
+    font: 700 20px "Volkhov-bold";
+}
+#viewcartbtn {
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove the border */
+    color: #000; /* Text color, change as needed */
+    /* Add other styling as needed, such as padding, font, etc. */
+    font: 700 20px "Volkhov-bold";
+}
+
+#UsrDshBrdContent2 {
+    background-image: url('../images/dalle2~2.png');
+}
+
+#UsrAccntLbl 
+{
+    color: #800000;
+    text-align: center;
+    font: 700 30px "Volkhov-Bold";
+  
+    text-decoration: none;
+   
+    
+
+
+    
+}
+
+
+#UsrAccntAddrss {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+}
+
+#UsrAccntPsswrd{
+
+     color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+
+
+}
+
+#UsrAccntCnfrmPsswrd {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+}
+
+#UsrAccntNme {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+}
+
+
+#UsrAccntEmail{
+
+      color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+
+
+
+}
+#UsrAccntPhno {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+}
+
+.UsrOdernowlbl {
+    color: #800000;
+    text-align: center;
+    font: 700 30px "Volkhov-Bold";
+    position: relative;
+    text-decoration: none;
+}
+
+#UsrAccntBtnSbt{
+border-radius: 10px;
+background: #6d6259;
+border: 1px solid;
+border-color: #6d6259;
+color: #ffffff;
+text-align: center;
+font: 700 20px "Volkhov-Bold", sans-serif;
+border-radius: 5px;
+}
+
+#UsrAccntBtnClear {
+    border-radius: 10px;
+    background: #561111;
+    border: 1px solid;
+    border-color: #6d6259;
+    color: #ffffff;
+    text-align: center;
+    font: 700 20px "Volkhov-Bold", sans-serif;
+    border-radius: 5px;
+}
+
+
+#UsrAccntBtnDlte {
+    border-radius: 10px;
+    background: #7C5353;
+    border: 1px solid;
+    border-color: #6d6259;
+    color: #ffffff;
+    text-align: center;
+    font: 700 20px "Volkhov-Bold", sans-serif;
+    border-radius: 5px;
+}
+
+#UsrAccntLblMsg {
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+   color: #800000;
+}
+
+#NrthIndLbl {
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+    color: #800000;
+}
+#butterchicken{
+
+    height:168px;
+    width:140px;
+    margin-left: 113px;
+    margin-top: 0px;
+}
+#Nirvanaspclbiriyani {
+    height: 168px;
+    width: 140px;
+}
+
+#samosa {
+    height: 168px;
+    width: 140px;
+    margin-left: 87px;
+}
+#Hariyalipaneer {
+    height: 168px;
+    width: 140px;
+    margin-left: 177px;
+}
+#UsrAccntCnfrmLbl {
+    text-align: center;
+    font: 700 17px "Volkhov-Bold";
+    position: relative;
+    color: #800000;
+}
+
+
+#background1 {
+    background-image: url('../images/dalle2~2.png');
+    /* Replace with your image path */
+    /* Center the background image */
+    background-size: cover; /* Cover the entire area of the body */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* Fix the background relative to the viewport */
+    background-position: center; /* Center the background image */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#home-icon, #cartnvgtn {
+    width: auto; /* Adjust width as needed */
+}
+
+    #home-icon img, #carticonpng {
+        vertical-align: middle; /* Align images vertically */
+    }
+
+
+
+#cnctbckbtn {
+    font: 700 15px "Volkhov";
+    background-position: center;
+    height: 100px; /* Adjust as needed */
+    width: 124px; /* Adjust as needed */
+    border: none;
+}
+#lblcntctUs {
+    color: #000000;
+    text-align: left;
+    font: 700 25px "Volkhov";
+    position: relative;
+}
+#cntctInfo {
+    color: #000000;
+    text-align: left;
+    font: 700 15px "Volkhov";
+    position: relative;
+}
+#AccountLabel {
+    color: #000000;
+    text-align: left;
+    font: 700 40px "Volkhov";
+    position: relative;
+}
+
+#loginlbl {
+    color: #000000;
+    text-align: left;
+    font: 700 40px "Volkhov";
+    position: relative;
+}
+
+#LblMsgLgn {
+   
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+}
+
+#lblEmailLgn {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+}
+
+#lblpsswrdlgn {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold";
+    position: relative;
+}
+/*#NameTextBox {
+     
+    border-radius: 41px;
+    width: 500px;
+    height: 234px;
+    position: relative; 
+
+   
+}*/
+#AccountName {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold", sans-serif;
+    position: relative;
+}
+
+#Email {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold", sans-serif;
+    position: relative;
+}
+
+#Phonenumber {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold", sans-serif;
+    position: relative;
+}
+
+#Address {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold", sans-serif;
+    position: relative;
+}
+
+
+
+#Password {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold", sans-serif;
+    position: relative;
+}
+#ConfirmPwwrd {
+    color: #000000;
+    text-align: center;
+    font: 700 24px "Volkhov-Bold", sans-serif;
+    position: relative;
+}
+
+#SignUpBtn {
+    border-radius: 10px;
+    background: #6d6259;
+    border: 1px solid;
+    border-color: #6d6259;
+    color: #ffffff;
+    text-align: center;
+    font: 700 20px "Volkhov-Bold", sans-serif;
+    border-radius: 5px;
+}
+
+#LoginBtn {
+    border-radius: 10px;
+    background: #6d6259;
+    border: 1px solid;
+    border-color: #6d6259;
+    color: #ffffff;
+    text-align: center;
+    font: 700 20px "Volkhov-Bold", sans-serif;
+    border-radius: 5px;
+}
+
+#AcntCnfirm {
+    color: #000000;
+    text-align: center;
+    font: 700 12px "Volkhov-Bold", sans-serif;
+    position: relative;
+}
+
+#lblNoAccntlgn {
+    color: #000000;
+    text-align: center;
+    font: 700 12px "Volkhov-Bold", sans-serif;
+    position: relative;
+}
+
+#HyperLinkLogin {
+    color: #000000;
+    text-align: center;
+    font: 700 12px "Volkhov-Bold", sans-serif;
+    font-style: italic;
+    position: relative;
+}
+
+#HyperRegister {
+    color: #000000;
+    text-align: center;
+    font: 700 12px "Volkhov-Bold", sans-serif;
+    font-style: italic;
+    position: relative;
+}
+.logo {
+    position: absolute; /* This takes the logo out of the normal flow and positions it absolutely */
+    top: -7px; /* Aligns the top edge of the logo with the top of the header */
+    left: 47px; /* Aligns the left edge of the logo with the left of the header */
+    width: 159px; /* Example width, adjust as needed */
+    height: 156px; /* Maintain the aspect ratio of the logo */
+}
