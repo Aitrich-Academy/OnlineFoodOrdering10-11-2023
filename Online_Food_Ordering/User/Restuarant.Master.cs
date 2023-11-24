@@ -14,9 +14,6 @@ namespace Online_Food_Ordering.User
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
