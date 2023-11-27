@@ -14,7 +14,7 @@ namespace BAL.User.Manager
     {
 
 
-       private  DataBaseConnect dbconnect = new DataBaseConnet();
+       private  DataBaseConnet dbconnect = new DataBaseConnet();
 
        public  UserPro userdetails = new UserPro();
 
