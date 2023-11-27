@@ -34,33 +34,6 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-    <asp:DataList ID="DataList1" runat="server" DataKeyField="Id" DataSourceID="SqlDataSource1">
-        <ItemTemplate>
-            Id:
-            <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
-            <br />
-            Name:
-            <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
-            <br />
-            CategoryId:
-            <asp:Label ID="CategoryIdLabel" runat="server" Text='<%# Eval("CategoryId") %>' />
-            <br />
-            Description:
-            <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Eval("Description") %>' />
-            <br />
-            Image:
-            <asp:Label ID="ImageLabel" runat="server" Text='<%# Eval("Image") %>' />
-            <br />
-            Price:
-            <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price") %>' />
-            <br />
-            Status:
-            <asp:Label ID="StatusLabel" runat="server" Text='<%# Eval("Status") %>' />
-            <br />
-<br />
-        </ItemTemplate>
-</asp:DataList>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RestuarantConnectionString %>" SelectCommand="SELECT * FROM [Dishes]"></asp:SqlDataSource>
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -71,6 +44,27 @@
     &nbsp;&nbsp;
     <br />
     <br />
+    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Height="389px" Width="90px" OnSelectedIndexChanged="DataList1_SelectedIndexChanged" OnItemCommand="DataListDishes_ItemCommand">
+        <ItemTemplate>
+           <div class="dish-item">
+            <strong>Name:</strong> <%# Eval("Name") %><br />
+            <strong>Image:</strong> <img src='<%# Eval("ImageUrl") %>' alt='<%# Eval("Name") %>' /><br />
+            <strong>Price:</strong> <%# Eval("Price") %><br />
+
+            <div class="quantity-controls">
+                <asp:Button ID="BtnMinus" runat="server" CommandName="Decrease" 
+                            CommandArgument='<%# Eval("Id") %>' Text="-" />
+                <asp:Label ID="LblQuantity" runat="server" Text="1" />
+                <asp:Button ID="BtnPlus" runat="server" CommandName="Increase" 
+                            CommandArgument='<%# Eval("Id") %>' Text="+" />
+            </div>
+
+            <asp:Button ID="OrderButton" runat="server" CommandName="Order" 
+                        CommandArgument='<%# Eval("Id") %>' Text="Order Now" />
+        </div>
+        </ItemTemplate>
+    </asp:DataList>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RestuarantConnectionString %>" SelectCommand="SELECT [Name], [Image], [Price] FROM [Dishes]"></asp:SqlDataSource>
     <br />
     <br />
     <br />
