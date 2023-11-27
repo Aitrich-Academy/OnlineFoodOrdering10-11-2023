@@ -13,5 +13,10 @@ namespace Online_Food_Ordering.Admin
         {
 
         }
+
+        protected void ImageBtnConfirm_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
     }
 }
