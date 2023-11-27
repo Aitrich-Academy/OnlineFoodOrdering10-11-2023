@@ -29,24 +29,27 @@ namespace Online_Food_Ordering.User
 
 
         }
-
-       protected void hariyaliplus_Click(object sender, EventArgs e)
-       {
-
-       }
-
-
-
-
-
-
-
+        protected void DataListDishes_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+           
+            
+            
+            
+            
+            
+            
+            
 
 
 
 
 
 
-       
+        }
+
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

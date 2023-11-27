@@ -144,6 +144,21 @@ body {
     
 }
 
+.quantity-controls {
+    margin: 10px 0;
+}
+
+    .quantity-controls button {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .quantity-controls label {
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+    }
+
 
 #UsrAccntAddrss {
     color: #000000;
