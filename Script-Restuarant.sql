@@ -85,6 +85,114 @@ commit transaction
 select @result
 end
 GO
+----------------------------Stored Procedure :- User Login--------------------
+CREATE PROCEDURE users_login
+(
+    @Email VARCHAR(50),
+    @Password VARCHAR(50)
+)
+AS
+BEGIN
+    SELECT Role
+    FROM Users
+    WHERE Email = @Email AND Password = @Password AND Status = 'A'
+END
+GO
+
+
+drop proc users_login;
+
+CREATE PROCEDURE users_login
+(
+    @Email VARCHAR(50),
+    @Password VARCHAR(50)
+)
+AS
+BEGIN
+    -- Check if a user with the given email and password exists
+    IF EXISTS(SELECT 1 FROM Users WHERE Email = @Email AND Password = @Password AND Status = 'A')
+    BEGIN
+        -- If the user exists, select and return the role,id
+        SELECT Role,Id FROM Users WHERE Email = @Email AND Password = @Password AND Status = 'A'
+    END
+    ELSE
+    BEGIN
+        -- If the user does not exist, return a message indicating invalid credentials
+        SELECT 'Invalid credentials, please try sign up.' AS Message
+    END
+END
+GO
+
+drop proc users_login;
+
+
+EXEC users_login @Email = 'afi@gmail.com', @Password = 'ASAmari55##123';
+------------------------------GetUserDetails-----------------------------
+CREATE PROCEDURE GetUserDetails
+    @UserId INT
+AS
+BEGIN
+    -- Selecting user details from the Users table where the user ID matches
+    SELECT Id,Name,Address, Email, Phone, Password -- and other fields you need
+    FROM Users
+    WHERE Id = @UserId;
+END;
+
+execute  GetUserDetails @UserId = '1008';
+
+
+
+-------------------------Update User Details -------------------------------------
+CREATE PROCEDURE UpdateUserProfile
+    @UserId INT,
+    @Name VARCHAR(50),
+    @Address VARCHAR(50),
+    @Phone VARCHAR(50),
+    @Email VARCHAR(50),
+    @Password VARCHAR(50)
+AS
+BEGIN
+    -- Update user details in the Users table where the UserId matches
+    UPDATE Users
+    SET Name = @Name,
+        Address = @Address,
+        Phone = @Phone,
+        Email = @Email,
+        Password = @Password
+    WHERE Id = @UserId;
+
+    -- Check if any rows were affected
+    IF @@ROWCOUNT > 0
+    BEGIN
+        SELECT 'Success' AS Message; -- Return 'Success' if rows were affected
+    END
+    ELSE
+    BEGIN
+        SELECT 'Error' AS Message; -- Return 'Error' if no rows were affected
+    END
+END;
+GO
+-------------------------------Delete user Account --------------------------
+CREATE PROCEDURE DeleteUserAccount
+    @UserId INT
+AS
+BEGIN
+    -- Delete user from the Users table where the UserId matches
+    DELETE FROM Users
+    WHERE Id = @UserId;
+
+    -- Check if any rows were affected
+    IF @@ROWCOUNT > 0
+    BEGIN
+        SELECT 'Success' AS Message; -- Return 'Success' if rows were affected
+    END
+    ELSE
+    BEGIN
+        SELECT 'Error' AS Message; -- Return 'Error' if no rows were affected
+    END
+END;
+GO
+
 ---------------------------------------------------------------------------------
 select * from Users
 ----------------------------Stored Procedure :- insert category--------------------
@@ -285,3 +393,26 @@ select * from Users
 update users set status='A' where Id=1001
 ------------------------------------------------------------------
 select *from orders
+---------------------------------Stored Procedure: select_all_orders details-------------------
+CREATE procedure select_all_orders
+as
+begin
+ SELECT o.ID, u.Name as UserName, u.Phone,u.Email, d.Name as DishName,d.Image, o.Quantity, o.Price  
+                       FROM Orders o  
+                       JOIN Users u ON o.UserID = u.ID  
+                       JOIN Dishes d ON o.DishID = d.ID;
+end
+GO
+------------------------------------------------------------
+
+exec  select_all_orders
+-----------------------join order ----------------------------------
+ SELECT o.ID, u.Name, u.Phone, d.Name,d.Image, o.Quantity, o.Price  
+                       FROM Orders o  
+                       JOIN Users u ON o.UserID = u.ID  
+                       JOIN Dishes d ON o.DishID = d.ID;
+
+--------------------------------------------------------------------------
+select * from Orders
+select * from Dishes
+insert into Orders values(1001,3004,2,250,'A');

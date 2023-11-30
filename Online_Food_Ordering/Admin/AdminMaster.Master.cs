@@ -34,5 +34,10 @@ namespace Online_Food_Ordering.Admin
         {
             Response.Redirect("~/Admin/ViewOrders.aspx");
         }
+
+        protected void BtnLogout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Login.aspx");
+        }
     }
 }

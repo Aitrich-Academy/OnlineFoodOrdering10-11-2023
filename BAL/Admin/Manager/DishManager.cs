@@ -15,6 +15,7 @@ namespace BAL.Admin.Manager
         private DataBaseConnet dbConnet = new DataBaseConnet();
         public DishProperty dishProperty = new DishProperty();
         private SortedList S1 = new SortedList();
+        public OrderProperty orderProperty = new OrderProperty();
 
         public string DishInsert()
         {
@@ -86,6 +87,6 @@ namespace BAL.Admin.Manager
             return dbConnet.executeprocedure(S1, "delete_dishes");
         }
 
-       
+        
     }
 }

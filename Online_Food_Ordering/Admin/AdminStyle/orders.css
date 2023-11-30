@@ -1,8 +1,9 @@
 ﻿body {
 }
 .heading {
-    margin-top: 150px;
+    margin-top: 80px;
     margin-left: 700px;
+    
 }
 .lblheading {
     color: #000;
@@ -13,3 +14,11 @@
     font-weight: 700;
     line-height: normal;
 }
+.gridOrders {
+    margin-top: 20px;
+}
+.div_lbl {
+    margin-left: 500px;
+    margin-top: 20px;
+}
+

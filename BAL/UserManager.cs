@@ -14,7 +14,7 @@ namespace BAL
     {
 
 
-        private DataBaseConnect dbconnect = new DataBaseConnect();
+        private DataBaseConnet dbconnect = new DataBaseConnet();
 
         public UserPro userdetails = new UserPro();
 
