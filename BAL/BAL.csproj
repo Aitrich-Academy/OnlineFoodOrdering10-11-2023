@@ -46,6 +46,8 @@
     <Compile Include="Admin\Manager\UserManager.cs" />
     <Compile Include="Admin\Property\CategoryProperty.cs" />
     <Compile Include="Admin\Property\DishProperty.cs" />
+    <Compile Include="Admin\Property\OrderItemProperty.cs" />
+    <Compile Include="Admin\Property\OrderProperty.cs" />
     <Compile Include="Admin\Property\UserProperty.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

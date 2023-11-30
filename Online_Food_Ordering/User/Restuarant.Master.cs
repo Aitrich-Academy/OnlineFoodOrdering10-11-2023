@@ -14,6 +14,36 @@ namespace Online_Food_Ordering.User
 
         }
 
-       
+        protected void homebtn1_Click(object sender, EventArgs e)
+        {
+
+
+            Response.Redirect("~/User/UserDashBoard.Aspx");
+
+
+        }
+
+        protected void AccntBtn_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("~/User/UserAccount.Aspx");
+
+
+        }
+
+        protected void CtgryBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/User/UserAccount.Aspx");
+        }
+
+        protected void SearchBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/User/UserAccount.Aspx");
+        }
+
+        protected void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/User/Login.Aspx");
+        }
     }
 }
