@@ -24,21 +24,21 @@ namespace Online_Food_Ordering.User
         protected global::System.Web.UI.WebControls.Label NrthIndLbl;
 
         /// <summary>
-        /// DataList1 control.
+        /// quantitycnfrmlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList1;
+        protected global::System.Web.UI.WebControls.Label quantitycnfrmlbl;
 
         /// <summary>
-        /// SqlDataSource1 control.
+        /// DataListDishes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.DataList DataListDishes;
     }
 }

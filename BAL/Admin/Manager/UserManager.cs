@@ -12,13 +12,13 @@ namespace BAL.Admin.Manager
 {
     public class UserManager
     {
-        private DataBaseConnet dbConnet = new DataBaseConnet();
+        private DataBaseConnect dbConnet = new DataBaseConnect();
         public UserProperty userProperty = new UserProperty();
         private SortedList S1 = new SortedList();
         public object SelectAllUsers() 
         {
             DataTable dt = new DataTable();
-            dt = dbConnet.getdatatable("select_all_users");
+            dt = dbConnet.GetDataTable("select_all_users");
             List<UserProperty> _list = new List<UserProperty>();
             foreach (DataRow dr in dt.Rows)
             {
