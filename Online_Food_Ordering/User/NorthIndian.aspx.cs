@@ -1,6 +1,7 @@
 ﻿using BAL.Admin.Manager;
 using BAL.Admin.Property;
 using BAL.User.Manager;
+using BAL.User.Property;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -134,13 +135,13 @@ namespace Online_Food_Ordering.User
             int quantity = quantities[dishId];
             int qnty = quantity;
             // Create a new order
-            OrderProperty newOrder = new OrderProperty
+            UserOrderProperty NorthIndianOrder = new UserOrderProperty
             {
 
 
                 OrderId = GetNewOrderId(), // Generate a new order ID
                 UserId = userid, // Retrieved from the session or other means
-                OrderDate = DateTime.Now,
+              //  OrderDate = DateTime.Now,
                 Item = new OrderItemProperty
                 {
                     DishId = dishId,
@@ -153,7 +154,8 @@ namespace Online_Food_Ordering.User
             };
 
             // Store the order in a session
-            Session["NorthIndianOrder"] = newOrder;
+            Session["OrderType"] = "NorthIndian";
+            Session["NorthIndianDishOrder"] = NorthIndianOrder;
 
             Response.Redirect("~/User/OrderDetails.Aspx");
 
