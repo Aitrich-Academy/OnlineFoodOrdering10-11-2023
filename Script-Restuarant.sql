@@ -232,6 +232,7 @@ end
 GO
 -----------------------------------------------------------
 exec  category_insert 'Vegan','Plant based food','C:\Simna\asp.net project\Restuarant App\grilledasparagus.jpg'
+
 select * from Categories
 ----------------------------Stored Procedure :- insert Dishes--------------------
 CREATE procedure dishes_insert
