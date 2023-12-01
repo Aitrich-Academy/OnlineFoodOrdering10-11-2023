@@ -12,7 +12,7 @@ namespace BAL.Admin.Manager
 {
     public class CategoryManager
     {
-        private DataBaseConnet dbConnet= new DataBaseConnet();
+        private DataBaseConnect dbConnet= new DataBaseConnect();
         public CategoryProperty categoryProperty= new CategoryProperty();
         private SortedList S1=new SortedList();
         public DishProperty dishProperty= new DishProperty();
@@ -32,7 +32,7 @@ namespace BAL.Admin.Manager
         {
 
             DataTable dt = new DataTable();
-            dt = dbConnet.getdatatable("select_all_category");
+            dt = dbConnet.GetDataTable("select_all_category");
             List<CategoryProperty> _list = new List<CategoryProperty>();
             _list.Add(new CategoryProperty
             {

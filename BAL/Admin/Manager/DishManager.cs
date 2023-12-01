@@ -12,7 +12,7 @@ namespace BAL.Admin.Manager
 {
     public class DishManager
     {
-        private DataBaseConnet dbConnet = new DataBaseConnet();
+        private DataBaseConnect dbConnet = new DataBaseConnect();
         public DishProperty dishProperty = new DishProperty();
         private SortedList S1 = new SortedList();
         public OrderProperty orderProperty = new OrderProperty();
@@ -32,7 +32,7 @@ namespace BAL.Admin.Manager
         public object SelectAllDishes()
         {
             DataTable dt = new DataTable();
-            dt = dbConnet.getdatatable("select_all_dishes");
+            dt = dbConnet.GetDataTable("select_all_dishes");
             List<DishProperty> _list = new List<DishProperty>();
             foreach (DataRow dr in dt.Rows)
             {
@@ -56,7 +56,7 @@ namespace BAL.Admin.Manager
             S1.Clear();
             S1.Add("Id", dishProperty.Id);
             DataTable dt = new DataTable();
-            dt = dbConnet.getdatatable(S1, "select_dishes_byid");
+            dt = dbConnet.GetDataTable(S1, "select_dishes_byid");
             if (dt.Rows.Count > 0)
             {
                 dishProperty.Name = dt.Rows[0].ItemArray[0].ToString();

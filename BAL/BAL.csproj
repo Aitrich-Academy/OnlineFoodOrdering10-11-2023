@@ -47,6 +47,7 @@
     <Compile Include="Admin\Manager\UserManager.cs" />
     <Compile Include="Admin\Property\CategoryProperty.cs" />
     <Compile Include="Admin\Property\DishProperty.cs" />
+    <Compile Include="User\Property\OrderItemProperty.cs" />
     <Compile Include="Admin\Property\OrderProperty.cs" />
     <Compile Include="Admin\Property\UserProperty.cs" />
     <Compile Include="UserManager.cs" />
@@ -57,17 +58,17 @@
     <Compile Include="User\Manager\UserManager.cs" />
     <Compile Include="User\Property\CategoryPro.cs" />
     <Compile Include="User\Property\DishesPro.cs" />
-    <Compile Include="User\Property\OrderPro.cs" />
+    <Compile Include="User\Property\UserOrderProperty.cs" />
     <Compile Include="User\Property\UserPro.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User\Manager\New folder\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{646c7e2e-88b7-4b2a-a1da-3384fbf88d4d}</Project>
       <Name>DAL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="User\Manager\New folder\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

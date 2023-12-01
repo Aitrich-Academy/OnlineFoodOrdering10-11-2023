@@ -22,6 +22,10 @@
             margin-left: 0px;
             margin-top: 0px;
         }
+        .auto-style2 {
+            width: 898px;
+            margin-left: 142px;
+        }
     </style>
 </head>
 <body id ="masterbdy">
@@ -29,19 +33,19 @@
 
          <img class="auto-style1" src="images/nirvana%20indic%20original%20logo.png" />
       
-        <div id="menu">
+        <div id="menu" class="auto-style2">
               
-            <a href="UserDashboard.aspx"> <asp:Button ID="homebtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 15px; margin-top: 20px" Text="Home" Width="89px" /> </a>
-             <asp:Button ID="Accnbtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 45px; margin-top: 20px" Text="Account" Width="122px" />
+            <asp:Button ID="homebtn" runat="server" ForeColor="Black" OnClick="homebtn1_Click" style="margin-left: 15px; margin-top: 20px" Text="Home" Width="89px" /> 
+             <asp:Button ID="Accnbtn" runat="server" ForeColor="Black" OnClick="AccntBtn_Click" style="margin-left: 45px; margin-top: 20px" Text="Account" Width="122px" />
 
-             <asp:Button ID="viewctgrybtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 64px; margin-top: 20px" Text="Categories" Width="107px" />
+             <asp:Button ID="viewctgrybtn" runat="server" ForeColor="Black" OnClick="CtgryBtn_Click" style="margin-left: 64px; margin-top: 20px" Text="Categories" Width="107px" />
 
-            <asp:Button ID="Searchnvgtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 33px; margin-top: 20px" Text="Search" Width="126px" />
+            <asp:Button ID="Searchnvgtn" runat="server" ForeColor="Black" OnClick="SearchBtn_Click" style="margin-left: 33px; margin-top: 20px" Text="Search" Width="126px" />
 
            
-             <asp:Button ID="viewcartbtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 12px; margin-top: 20px" Text="Cart" Width="126px" />
+           
 
-             <asp:Button ID="logoutbtn" runat="server" ForeColor="Black" OnClick="Button1_Click" style="margin-left: 36px; margin-top: 20px" Text="Logout" Width="126px" />
+             <asp:Button ID="logoutbtn" runat="server" ForeColor="Black" OnClick="LogoutBtn_Click" style="margin-left: 36px; margin-top: 20px" Text="Logout" Width="108px" />
 
            
               </div>
