@@ -289,7 +289,9 @@ select * from Dishes
 CREATE procedure select_all_dishes
 as
 begin
-select Id,Name,CategoryId,Description,Image,Price from Dishes where Status='A'
+ SELECT d.Id,d.Name,c.Name as CategoryName,d.Description,d.Image,d.Price
+						from Dishes d 
+						JOIN Categories c ON d.CategoryId = c.Id where d.Status='A';
 end
 GO
 -----------------------------------------------------

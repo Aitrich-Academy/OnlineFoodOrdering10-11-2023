@@ -28,7 +28,7 @@
     left: 300px;
     padding: 20px;
     width: 800px;
-    height: 100px;
+    height: 120px;
     border-radius: 15px;
     background: linear-gradient(to right, #c1bfb7, #d6d6d1);
     /*box-sizing: border-box;*/
@@ -112,7 +112,7 @@
 .RFDescrip {
     position: absolute;
     top: 45px;
-    left: 450px;
+    left: 400px;
 }
 .LblImage {
     position: absolute;
@@ -129,8 +129,8 @@
     vertical-align: middle;
 }
 .FileUpCategorys {
-    position: relative;
-    top: -55px;
+    position: absolute;
+    top: 25px;
     left: 480px;
     width:180px;
     border: 1px solid #6D6259;
@@ -142,8 +142,8 @@
 
 
 .categorybutton {
-    position: relative;
-    top: -80px;
+    position: absolute;
+    top: 30px;
     left: 680px;
 
 
@@ -162,9 +162,9 @@
     line-height: normal;
 }
 .categoryClear {
-    position: relative;
-    top: -30px;
-    left: 590px;
+    position: absolute;
+    top: 90px;
+    left: 680px;
     width: 90px;
     height: 40px;
     vertical-align: middle;
@@ -182,7 +182,7 @@
 
 .form-column-lblmsg1 {
     position: absolute;
-    top: 75px;
+    top: 90px;
     left: 200px;
 }
 .form-column-Hf1 {
@@ -397,7 +397,6 @@
     border-radius: 8px;
     position: absolute;
     left: 35px;
-    height: 50px; /* Set the maximum height for the grid */
     overflow-y: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */

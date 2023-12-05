@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-column">
                     <asp:Label ID="LblDscrptn" runat="server" Text="Description"  CssClass="LblDscrptn"></asp:Label>
-                    <asp:TextBox ID="TxtDescription" runat="server" CssClass="TxtDescription"  TextMode="MultiLine"></asp:TextBox>
+                    <asp:TextBox ID="TxtDescription" runat="server" CssClass="TxtDescription"  TextMode="MultiLine" Height="40px" ></asp:TextBox>
 
                      <asp:RequiredFieldValidator ID="RFCategoryDescription" runat="server" CssClass="RFDescrip" ControlToValidate="TxtDescription" ErrorMessage="**" ForeColor="Red" ValidationGroup="a"></asp:RequiredFieldValidator>
                 </div>
@@ -80,7 +80,7 @@
               <div class="form-row"  >
                    <div class="form-column">
                     <asp:Label ID="LblDescriptionD" runat="server" Text="Description"  CssClass="lbldiscrip2"></asp:Label>
-                    <asp:TextBox ID="TxtDishDescription" runat="server" CssClass="txtdiscrip2"  TextMode="MultiLine"></asp:TextBox>
+                    <asp:TextBox ID="TxtDishDescription" runat="server" CssClass="txtdiscrip2"  TextMode="MultiLine" Height="40px"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RFDiscriptionDish" runat="server" CssClass="RfdishDescrp" ControlToValidate="TxtDishDescription" ErrorMessage="**" ForeColor="Red" ValidationGroup="b"></asp:RequiredFieldValidator>    
                 </div>
                    <div class="form-column">
@@ -100,14 +100,25 @@
                 </Triggers>
     </asp:UpdatePanel>
         <div class="gridview">
-            <asp:GridView ID="GridDishes" runat="server" AutoGenerateColumns="False" DataKeyNames="Id,Name,CategoryId,Description,Image,Price" CellPadding="5" ForeColor="#333333" GridLines="None" CssClass="gridviewDish" Width="770px" Height="150px"  >
+            <asp:GridView ID="GridDishes" runat="server" AutoGenerateColumns="False" DataKeyNames="Id,Name,CategoryName,Description,Image,Price" CellPadding="5" ForeColor="#333333" GridLines="None" CssClass="gridviewDish" Width="700px" Height="150px"  >
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
-                    <asp:BoundField DataField="Id" HeaderText="Dish Id" />
-                    <asp:BoundField DataField="Name" HeaderText="Dish Name" />
-                    <asp:BoundField DataField="CategoryId" HeaderText="Category" />
+                    <asp:BoundField DataField="Id" HeaderText="Dish Id" ItemStyle-Width="150px">
+                    <HeaderStyle HorizontalAlign="Left" />
+<ItemStyle Width="150px"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Name" HeaderText="Dish Name"  ItemStyle-Width="150px">
+                    <HeaderStyle HorizontalAlign="Left" />
+<ItemStyle Width="150px"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="CategoryName" HeaderText="Category" >
              
-                    <asp:BoundField DataField="Price" HeaderText="Price" />
+                    <HeaderStyle HorizontalAlign="Left" />
+                    </asp:BoundField>
+             
+                    <asp:BoundField DataField="Price" HeaderText="Price" >
+                    <HeaderStyle HorizontalAlign="Left" />
+                    </asp:BoundField>
                     <asp:ImageField DataImageUrlField="Image" HeaderText="Image">
                         <ControlStyle Height="50px" Width="50px" />
                     </asp:ImageField>
