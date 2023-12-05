@@ -1,0 +1,15 @@
+﻿body {
+}
+.search_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Datalist_div {
+    margin-left: 200px;
+    margin-top: 25px;
+}
+.searchDatalist {
+    padding:25px;
+    margin-left:200px;
+}

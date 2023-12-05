@@ -18,7 +18,7 @@ namespace Online_Food_Ordering.User
         {
 
 
-            Response.Redirect("~/User/UserDashBoard.Aspx");
+            Response.Redirect("~/User/UserDashBoard.aspx");
 
 
         }
@@ -26,24 +26,24 @@ namespace Online_Food_Ordering.User
         protected void AccntBtn_Click(object sender, EventArgs e)
         {
 
-            Response.Redirect("~/User/UserAccount.Aspx");
+            Response.Redirect("~/User/UserAccount.aspx");
 
 
         }
 
         protected void CtgryBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/User/UserAccount.Aspx");
+            Response.Redirect("");
         }
 
         protected void SearchBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/User/UserAccount.Aspx");
+            Response.Redirect("~/User/Search.aspx");
         }
 
         protected void LogoutBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/User/Login.Aspx");
+            Response.Redirect("~/User/Login.aspx");
         }
     }
 }

@@ -48,6 +48,7 @@ namespace Online_Food_Ordering.Admin
             if ((HiddenFieldCategory.Value == "-1")&&(BtnCategorySubmit.ValidationGroup=="a"))
             {
                 CategoryInsert();
+                clearCategory();
 
                 //UpdatePanel.ContentTemplateContainer.Controls.Add(new LiteralControl("Category submitted successfully!"));
             }
@@ -124,10 +125,12 @@ namespace Online_Food_Ordering.Admin
             if ((HFDish.Value == "-1")&&(BtnSubmitDish.ValidationGroup=="b"))
             {
                 DishInsert();
+                clearDishes();
             }
             else
             {
                 DishUpdate();
+                clearDishes() ;
             }
 
         }

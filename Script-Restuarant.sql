@@ -232,6 +232,7 @@ end
 GO
 -----------------------------------------------------------
 exec  category_insert 'Vegan','Plant based food','C:\Simna\asp.net project\Restuarant App\grilledasparagus.jpg'
+
 select * from Categories
 ----------------------------Stored Procedure :- insert Dishes--------------------
 CREATE procedure dishes_insert
@@ -288,7 +289,9 @@ select * from Dishes
 CREATE procedure select_all_dishes
 as
 begin
-select Id,Name,CategoryId,Description,Image,Price from Dishes where Status='A'
+ SELECT d.Id,d.Name,c.Name as CategoryName,d.Description,d.Image,d.Price
+						from Dishes d 
+						JOIN Categories c ON d.CategoryId = c.Id where d.Status='A';
 end
 GO
 -----------------------------------------------------
