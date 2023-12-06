@@ -37,7 +37,7 @@ namespace Online_Food_Ordering.Admin
 
         protected void BtnLogout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Login.aspx");
+            Response.Redirect("~/User/Login.aspx");
         }
     }
 }

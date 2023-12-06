@@ -155,6 +155,7 @@
     <Content Include="Image\Applogo.png" />
     <Content Include="Image\bg1.png" />
     <Content Include="Image\bg2.png" />
+    <Content Include="Image\bgstart.png" />
     <Content Include="Image\bolcked.png" />
     <Content Include="Image\categories.png" />
     <Content Include="Image\confirm.jpg" />
@@ -164,6 +165,10 @@
     <Content Include="Image\home.png" />
     <Content Include="Image\logout.jpg" />
     <Content Include="Image\order.png" />
+    <Content Include="Image\startbutton.png" />
+    <Content Include="User\AboutUs.aspx" />
+    <Content Include="User\images\backButton.png" />
+    <Content Include="User\images\bgstart.png" />
     <Content Include="User\images\search.png" />
     <Content Include="User\Login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -243,13 +248,16 @@
     <Content Include="User\images\nirvana indic original logo.png" />
     <Content Include="User\images\nirvana spcl biryani.jpg" />
     <Content Include="User\images\samosa.jpg" />
-    <Content Include="User\images\website white background theme.png" />
+    <Content Include="User\images\bg4.png" />
     <Content Include="User\NorthIndian.aspx" />
     <Content Include="User\Registration.aspx" />
     <Content Include="User\Search.aspx" />
+    <Content Include="User\StartPage.aspx" />
     <Content Include="User\UserAccount.aspx" />
     <Content Include="User\UserDashboard.aspx" />
+    <Content Include="User\UserStyle\AboutUs.css" />
     <Content Include="User\UserStyle\search.css" />
+    <Content Include="User\UserStyle\startpage.css" />
     <Content Include="User\UserStyle\UserStyle.css" />
     <Content Include="User\OrderDetails.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -312,6 +320,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="User\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -368,6 +383,13 @@
     </Compile>
     <Compile Include="User\Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\StartPage.aspx.cs">
+      <DependentUpon>StartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\StartPage.aspx.designer.cs">
+      <DependentUpon>StartPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\UserAccount.aspx.cs">
       <DependentUpon>UserAccount.aspx</DependentUpon>
