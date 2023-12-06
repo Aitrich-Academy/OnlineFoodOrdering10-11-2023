@@ -7,7 +7,7 @@
     <asp:Label ID="LblHeading" runat="server" Text="Our Customers" CssClass="lblheading"></asp:Label>
     </div>
     <div class="gridUsers">
-    <asp:GridView ID="GridViewCustomers" runat="server" AutoGenerateColumns="False" DataKeyNames="Id,Name,Address,Phone,Email" CellPadding="4" ForeColor="#333333" GridLines="None" CssClass="gridviewUser" Width="770px" Height="150px"  HorizontalAlign="Center"  >
+    <asp:GridView ID="GridViewCustomers" runat="server" AutoGenerateColumns="False" DataKeyNames="Id,Name,Address,Phone,Email,Status" CellPadding="4" ForeColor="#333333" GridLines="None" CssClass="gridviewUser" Width="770px" Height="150px"  HorizontalAlign="Center"  >
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="Id" HeaderText="Id" />
@@ -15,6 +15,7 @@
             <asp:BoundField DataField="Address" HeaderText="Address" />
             <asp:BoundField DataField="Phone" HeaderText="Phone" />
             <asp:BoundField DataField="Email" HeaderText="Email" />
+            <asp:BoundField DataField="Status" HeaderText="Status" />
             <asp:TemplateField HeaderText="Block">
                 <ItemTemplate>
                     <asp:ImageButton ID="ImageBtnBlock" runat="server" Height="41px" Width="46px" ImageUrl="~/Image/bolcked.png" OnClick="ImageBtnBlock_Click" />

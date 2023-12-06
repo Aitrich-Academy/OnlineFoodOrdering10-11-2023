@@ -366,9 +366,14 @@ end
 CREATE procedure select_all_users
 as
 begin
-select Id,Name,Address,Phone,Email,Password from Users where Status='A' and Role='user'
+select Id,Name,Address,Phone,Email,Status from Users where  Role='user'
 end
 GO
+-----------------------------------------------------------------------------------
+drop proc select_all_users
+exec select_all_users
+update users set status='A' where Id=1003;
+select * from Users
 ----------------------stored procedure : block users-------------------------------
 create procedure block_user_byId
 ( 
@@ -393,7 +398,7 @@ select @result
 end
 ---------------------------------------------------------------
 select * from Users
-update users set status='A' where Id=1001
+update users set status='A' where Id=1003
 ------------------------------------------------------------------
 select *from orders
 ---------------------------------Stored Procedure: select_all_orders details-------------------
@@ -418,4 +423,5 @@ exec  select_all_orders
 --------------------------------------------------------------------------
 select * from Orders
 select * from Dishes
-insert into Orders values(1001,3004,2,250,'A');
+select * from Users
+insert into Orders values(1001,3010,2,180,'A');
