@@ -157,7 +157,7 @@ namespace Online_Food_Ordering.User
             Session["OrderType"] = "NorthIndian";
             Session["NorthIndianDishOrder"] = NorthIndianOrder;
 
-            Response.Redirect("~/User/OrderDetails.Aspx");
+            Response.Redirect("~/User/OrderDetails.aspx");
 
 
 
@@ -176,26 +176,6 @@ namespace Online_Food_Ordering.User
             quantitycnfrmlbl.Visible = true;
             quantitycnfrmlbl.Text = "select your favourite dish";
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
