@@ -236,19 +236,23 @@
     <Content Include="User\images\download.jfif" />
     <Content Include="User\images\Hariyali-Paneer-Tikka-14.jpg" />
     <Content Include="User\images\home.png" />
+    <Content Include="User\images\idliCtgry.jpg" />
+    <Content Include="User\images\idliDish.jpg" />
     <Content Include="User\images\landing page-adminANDuser.png" />
     <Content Include="User\images\letsstart.png" />
     <Content Include="User\images\logout.jpg" />
     <Content Include="User\images\nirvana indic original logo.png" />
     <Content Include="User\images\nirvana spcl biryani.jpg" />
     <Content Include="User\images\samosa.jpg" />
+    <Content Include="User\images\veganCtgry.jpg" />
     <Content Include="User\images\website white background theme.png" />
-    <Content Include="User\NorthIndian.aspx" />
+    <Content Include="User\Dishes.aspx" />
     <Content Include="User\Registration.aspx" />
     <Content Include="User\UserAccount.aspx" />
     <Content Include="User\UserDashboard.aspx" />
     <Content Include="User\UserStyle\UserStyle.css" />
     <Content Include="User\OrderDetails.aspx" />
+    <Content Include="User\Categories.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -338,12 +342,12 @@
     <Compile Include="Admin\ViewCustomers.aspx.designer.cs">
       <DependentUpon>ViewCustomers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\NorthIndian.aspx.cs">
-      <DependentUpon>NorthIndian.aspx</DependentUpon>
+    <Compile Include="User\Dishes.aspx.cs">
+      <DependentUpon>Dishes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\NorthIndian.aspx.designer.cs">
-      <DependentUpon>NorthIndian.aspx</DependentUpon>
+    <Compile Include="User\Dishes.aspx.designer.cs">
+      <DependentUpon>Dishes.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
@@ -379,6 +383,13 @@
     </Compile>
     <Compile Include="User\OrderDetails.aspx.designer.cs">
       <DependentUpon>OrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
