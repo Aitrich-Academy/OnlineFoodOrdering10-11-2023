@@ -41,7 +41,7 @@ namespace BAL.Admin.Manager
 
                     Id = Convert.ToInt32(dr["Id"]),
                     Name = dr["Name"].ToString(),
-                    CategoryId = Convert.ToInt32(dr["CategoryId"]),
+                    CategoryName = dr["CategoryName"].ToString(),
                     Description = dr["Description"].ToString(),
                     Image = dr["Image"].ToString(),
                     Price = Convert.ToDouble(dr["Price"])

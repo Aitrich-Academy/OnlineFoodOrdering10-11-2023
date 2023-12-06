@@ -100,7 +100,7 @@ namespace Online_Food_Ordering
                 }
                 else if (role == "Admin")
                 {
-                    Response.Redirect("~/Admin/AdminDashboard.Aspx");
+                    Response.Redirect("~/Admin/AdminDashboard.aspx");
                 }
             }
             else
