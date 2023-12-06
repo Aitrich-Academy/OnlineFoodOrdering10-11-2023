@@ -1,7 +1,8 @@
 ﻿using BAL.Admin.Manager;
 using BAL.Admin.Property;
-using BAL.User.Manager;
+
 using BAL.User.Property;
+using BAL.User.Manager;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,24 +15,31 @@ namespace Online_Food_Ordering.User
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
-       DishManager dishManager_obj = new DishManager();
+       UserDishesManager dishManager_obj = new UserDishesManager();
 
         int userid;
+        int dishId;
+        int categoryid;
         protected void Page_Load(object sender, EventArgs e)
         {
 
             if (!Page.IsPostBack)
             {
-                object list = dishManager_obj.SelectAllDishes();
-                DataListDishes.DataSource = list;
-                DataListDishes.DataBind();
-
-                if (Session["UserID"] != null)
+                if (Request.QueryString["CategoryId"] != null)
                 {
-                    // Retrieve the user ID from session
-                    int Id = Convert.ToInt32(Session["UserID"]);
-                }
 
+                    categoryid = Convert.ToInt32(Request.QueryString["CategoryId"]);
+                    object list = dishManager_obj.SelectAllDishes(categoryid);
+                    DataListDishes.DataSource = list;
+                    DataListDishes.DataBind();
+
+                    if (Session["UserID"] != null)
+                    {
+                        // Retrieve the user ID from session
+                        userid = Convert.ToInt32(Session["UserID"]);
+                    }
+
+                }
 
             }
 
@@ -44,23 +52,23 @@ namespace Online_Food_Ordering.User
             if (e.CommandName == "Increase")
             {
                 // Logic to increase the quantity
-                int dishId = Convert.ToInt32(e.CommandArgument);
+                 dishId = Convert.ToInt32(e.CommandArgument);
                 IncreaseQuantity(dishId);
             }
             else if (e.CommandName == "Decrease")
             {
                 // Logic to decrease the quantity
-                int dishId = Convert.ToInt32(e.CommandArgument);
+               dishId = Convert.ToInt32(e.CommandArgument);
                 DecreaseQuantity(dishId);
             }
             else if (e.CommandName == "Order")
             {
-
-                dishManager_obj.SelectDishById();
+                dishId = Convert.ToInt32(e.CommandArgument);
+                dishManager_obj.SelectDishById(dishId);
 
                 // Logic to handle the ordering process
-                int dishId = Convert.ToInt32(e.CommandArgument);
-                AddToOrder(dishId,userid,dishManager_obj.dishProperty.Name,dishManager_obj.dishProperty.Price);
+                
+                AddToOrder(dishId,userid,dishManager_obj.dishProperty.Name,dishManager_obj.dishProperty.Price,categoryid);
             }
 
         }
@@ -123,7 +131,7 @@ namespace Online_Food_Ordering.User
 
         
 
-        private void AddToOrder(int dishId,int userid,string dishName,double dishPrice ) 
+        private void AddToOrder(int dishId,int userid,string dishName,double dishPrice,int categoryid ) 
         {
             var quantities = Session["Quantities"] as Dictionary<int, int>;
             if (quantities == null || !quantities.ContainsKey(dishId))
@@ -135,32 +143,89 @@ namespace Online_Food_Ordering.User
             int quantity = quantities[dishId];
             int qnty = quantity;
             // Create a new order
-            UserOrderProperty NorthIndianOrder = new UserOrderProperty
+            if (categoryid == 2001)
             {
-
-
-                OrderId = GetNewOrderId(), // Generate a new order ID
-                UserId = userid, // Retrieved from the session or other means
-              //  OrderDate = DateTime.Now,
-                Item = new OrderItemProperty
+                UserOrderProperty NorthIndianOrder = new UserOrderProperty
                 {
-                    DishId = dishId,
-                    Quantity = qnty,
-                    price = dishPrice,
-                    Name = dishName,
-
-                    // Set other properties like price, etc.
-                }
-            };
-
-            // Store the order in a session
-            Session["OrderType"] = "NorthIndian";
-            Session["NorthIndianDishOrder"] = NorthIndianOrder;
-
-            Response.Redirect("~/User/OrderDetails.Aspx");
 
 
+                    OrderId = GetNewOrderId(), // Generate a new order ID
+                    UserId = userid, // Retrieved from the session or other means
+                                     //  OrderDate = DateTime.Now,
+                    Item = new OrderItemProperty
+                    {
+                        DishId = dishId,
+                        Quantity = qnty,
+                        price = dishPrice,
+                        Name = dishName,
 
+                        // Set other properties like price, etc.
+                    }
+                };
+
+                // Store the order in a session
+                Session["OrderType"] = "NorthIndian";
+                Session["NorthIndianDishOrder"] = NorthIndianOrder;
+
+                Response.Redirect("~/User/OrderDetails.Aspx");
+
+            }
+            else if(categoryid == 2002)
+            {
+                UserOrderProperty SouthIndianOrder = new UserOrderProperty
+                {
+
+
+                    OrderId = GetNewOrderId(), // Generate a new order ID
+                    UserId = userid, // Retrieved from the session or other means
+                                     //  OrderDate = DateTime.Now,
+                    Item = new OrderItemProperty
+                    {
+                        DishId = dishId,
+                        Quantity = qnty,
+                        price = dishPrice,
+                        Name = dishName,
+
+                        // Set other properties like price, etc.
+                    }
+                };
+
+                // Store the order in a session
+                Session["OrderType"] = "SouthIndian";
+                Session["SouthIndianDishOrder"] = SouthIndianOrder;
+
+                Response.Redirect("~/User/OrderDetails.Aspx");
+
+            }
+            else
+            {
+                UserOrderProperty VeganOrder = new UserOrderProperty
+                {
+
+
+                    OrderId = GetNewOrderId(), // Generate a new order ID
+                    UserId = userid, // Retrieved from the session or other means
+                                     //  OrderDate = DateTime.Now,
+                    Item = new OrderItemProperty
+                    {
+                        DishId = dishId,
+                        Quantity = qnty,
+                        price = dishPrice,
+                        Name = dishName,
+
+                        // Set other properties like price, etc.
+                    }
+                };
+
+                // Store the order in a session
+                Session["OrderType"] = "Vegan";
+                Session["VeganDishOrder"] =VeganOrder;
+
+                Response.Redirect("~/User/OrderDetails.Aspx");
+
+
+
+            }
 
         }
 
