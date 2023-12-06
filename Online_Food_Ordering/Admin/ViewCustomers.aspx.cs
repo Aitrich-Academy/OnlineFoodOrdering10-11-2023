@@ -30,6 +30,7 @@ namespace Online_Food_Ordering
         protected void BtnBlock_Click(object sender, EventArgs e)
         {
             blockCustomer();
+           
         }
 
         private void blockCustomer()
@@ -57,6 +58,23 @@ namespace Online_Food_Ordering
             GridViewRow gvr = imgbtn.NamingContainer as GridViewRow;
             HFuser.Value = GridViewCustomers.DataKeys[gvr.RowIndex].Value.ToString();
             blockUserById();
+
+            
+            GridViewRow row = (GridViewRow)((ImageButton)sender).NamingContainer;
+
+            // Get the index of the row
+            int rowIndex = row.RowIndex;
+
+            // Now you have the row index and can use it as needed
+            // For example, you can disable the ImageButton:
+            ImageButton ImageBtnBlock = (ImageButton)row.FindControl("ImageBtnConfirm");
+
+            if (ImageBtnBlock != null)
+            {
+                ImageBtnBlock.Enabled = false;
+            }
+
+
         }
 
         private void blockUserById() {
@@ -72,9 +90,10 @@ namespace Online_Food_Ordering
 
                 LblMessage.Visible = true;
                 LblMessage.Text = "Successfully Blocked";
-                //DishesBind();
 
-    }
+                BindUsers();
+
+            }
             else if (result == "Error")
             {
                 LblMessage.Visible = true;

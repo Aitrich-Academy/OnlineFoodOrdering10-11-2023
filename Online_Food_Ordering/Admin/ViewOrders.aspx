@@ -22,7 +22,7 @@
             <asp:BoundField DataField="Price" HeaderText="Price" />
             <asp:TemplateField HeaderText="Confirm">
                 <ItemTemplate>
-                    <asp:ImageButton ID="ImageBtnConfirm" runat="server" Height="41px" Width="46px" ImageUrl="~/Image/confirm.jpg" CommandName="Confirm" CommandArgument='<%# Container.DataItemIndex %>'   />
+                    <asp:ImageButton ID="ImageBtnConfirm" runat="server" Height="41px" Width="46px" ImageUrl="~/Image/confirm.jpg" CommandName="Confirm" CommandArgument='<%# Container.DataItemIndex %>' OnClick="ImageBtnConfirm_Click"   />
                 </ItemTemplate>
             </asp:TemplateField>
             
