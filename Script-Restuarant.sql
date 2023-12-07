@@ -45,6 +45,7 @@ Create table Orders(
 -----------------------
 alter table users add  Role varchar(20);
 select * from users
+insert into Users values('admin','Location',9874563210,'admin@gmail.com','Admin@123','A','Admin');
 
 ----------------------------Stored Procedure :- insert user--------------------
 
