@@ -33,12 +33,12 @@ namespace Online_Food_Ordering.User
 
         protected void CtgryBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("");
+            Response.Redirect("~/User/Categories.aspx");
         }
 
         protected void SearchBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/User/Search.aspx");
+            Response.Redirect("~/User/SearchDishes.aspx");
         }
 
         protected void LogoutBtn_Click(object sender, EventArgs e)

@@ -191,7 +191,7 @@ namespace Online_Food_Ordering.User
                 };
 
                 // Store the order in a session
-                Session["OrderType"] = "SouthIndian";
+                Session["OrderType"] = "SouthIndianDishOrder";
                 Session["SouthIndianDishOrder"] = SouthIndianOrder;
 
                 Response.Redirect("~/User/OrderDetails.Aspx");

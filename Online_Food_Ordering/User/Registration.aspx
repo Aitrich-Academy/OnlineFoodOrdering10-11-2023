@@ -214,7 +214,7 @@
        
            
         <asp:Label ID="AcntCnfirm" runat="server" Text="Already Have an Account?"></asp:Label>
-         <asp:HyperLink ID="HyperLinkLogin" runat="server" NavigateUrl="~/User/Login.aspx"  ForeColor="#993333">Login here...</asp:HyperLink>
+         <asp:HyperLink ID="HyperLinkLogin" runat="server" NavigateUrl="Login.aspx"  ForeColor="#993333">Login here...</asp:HyperLink>
        
      
    &nbsp;

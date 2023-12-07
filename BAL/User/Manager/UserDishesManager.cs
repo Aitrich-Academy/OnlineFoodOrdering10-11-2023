@@ -24,7 +24,7 @@ namespace BAL.User.Manager
             S1.Clear();
             S1.Add("CategoryId", categoryid);
             DataTable dt = new DataTable();
-            dt = dbConnet.GetDataTable("select_all_dishesby_Category");
+            dt = dbConnet.GetDataTable(S1,"select_all_dishesby_Category");
             List<DishesPro> _list = new List<DishesPro>();
             foreach (DataRow dr in dt.Rows)
             {

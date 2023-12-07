@@ -52,7 +52,7 @@
            <div class="dish-item">
             <strong>Name:</strong> <%# Eval("Name") %><br />
             <strong>Image:</strong> 
-               <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Image") %>' />
+               <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Image") %>' Height="150px" Width="150px" />
                <br />
             <strong>Price:</strong> <%# Eval("Price") %><br />
 
