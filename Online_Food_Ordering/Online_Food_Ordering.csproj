@@ -253,9 +253,7 @@
     <Content Include="User\images\restaurant contact bckground.jpg" />
     <Content Include="User\images\samosa.jpg" />
     <Content Include="User\images\bg4.png" />
-    <Content Include="User\NorthIndian.aspx" />
     <Content Include="User\images\veganCtgry.jpg" />
-    <Content Include="User\images\website white background theme.png" />
     <Content Include="User\Dishes.aspx" />
     <Content Include="User\Login.aspx" />
     <Content Include="User\Registration.aspx" />
