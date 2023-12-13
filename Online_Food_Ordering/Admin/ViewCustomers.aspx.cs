@@ -14,6 +14,13 @@ namespace Online_Food_Ordering
         UserManager userManager = new UserManager();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetNoStore();
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetValidUntilExpires(true);
+
             BindUsers();
             if (!IsPostBack)
             {

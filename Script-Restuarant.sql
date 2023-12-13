@@ -124,10 +124,10 @@ BEGIN
 END
 GO
 
-drop proc users_login;
 
+select * from users
 
-EXEC users_login @Email = 'afi@gmail.com', @Password = 'ASAmari55##123';
+EXEC users_login @Email = 'simnanoufal@gmail.com', @Password = 'Simna@123';
 ------------------------------GetUserDetails-----------------------------
 CREATE PROCEDURE GetUserDetails
     @UserId INT
