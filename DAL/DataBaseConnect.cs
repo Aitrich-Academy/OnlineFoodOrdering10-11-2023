@@ -15,7 +15,7 @@ namespace DAL
         public SqlConnection GetConnection()
         {
 
-            SqlConnection Con = new SqlConnection("Data Source=DESKTOP-LJA5H6T;Initial Catalog=Restuarant;Integrated Security=True;");
+            SqlConnection Con = new SqlConnection("Data Source=DESKTOP-PT1BLHF;Initial Catalog=onlinefood;Integrated Security=True;");
 
 
             if (Con.State == ConnectionState.Open)

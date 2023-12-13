@@ -16,13 +16,13 @@
     }
 */
 body {
-    background-image: url('../images/website%20white%20background%20theme.png');
+    
     background-size: cover; /* Ensures the image covers the full area */
     background-repeat: no-repeat;
     box-sizing: border-box;
-    margin: 20px 0 0 9px; /* Removes default margins */
-    height: 572px; /* Ensures at least full viewport height */
-    width: 1151px; /* Ensures full viewport width */
+    margin: 5px 0 0 9px; /* Removes default margins */
+    height: 884px; /* Ensures at least full viewport height */
+    width: 1347px; /* Ensures full viewport width */
 }
 #RestaurantCnct {
     background-image: url('../images/dalle2~1.png');
@@ -220,23 +220,24 @@ body {
 #UsrAccntBtnSbt{
 border-radius: 10px;
 background: #6d6259;
-border: 1px solid;
-border-color: #6d6259;
+border: 1px solid #6d6259;
 color: #ffffff;
 text-align: center;
 font: 700 20px "Volkhov-Bold", sans-serif;
 border-radius: 5px;
+    margin-left: 226px;
 }
 
 #UsrAccntBtnClear {
     border-radius: 10px;
     background: #561111;
-    border: 1px solid;
-    border-color: #6d6259;
+    border: 1px solid #6d6259;
     color: #ffffff;
     text-align: center;
     font: 700 20px "Volkhov-Bold", sans-serif;
     border-radius: 5px;
+    margin-left: 63px;
+    margin-top: 0px;
 }
 
 
@@ -439,23 +440,24 @@ border-radius: 5px;
 #SignUpBtn {
     border-radius: 10px;
     background: #6d6259;
-    border: 1px solid;
-    border-color: #6d6259;
+    border: 1px solid #6d6259;
     color: #ffffff;
     text-align: center;
     font: 700 20px "Volkhov-Bold", sans-serif;
     border-radius: 5px;
+    margin-top: 176px;
 }
 
 #LoginBtn {
     border-radius: 10px;
     background: #6d6259;
-    border: 1px solid;
-    border-color: #6d6259;
+    border: 1px solid #6d6259;
     color: #ffffff;
     text-align: center;
     font: 700 20px "Volkhov-Bold", sans-serif;
     border-radius: 5px;
+    margin-left: 320px;
+    margin-top: 88px;
 }
 
 #AcntCnfirm {

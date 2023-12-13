@@ -11,6 +11,7 @@ namespace Online_Food_Ordering.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
 
         }
 
@@ -43,7 +44,16 @@ namespace Online_Food_Ordering.User
 
         protected void LogoutBtn_Click(object sender, EventArgs e)
         {
+
+
+
+           
+            // Redirect to the login page
             Response.Redirect("~/User/Login.aspx");
+
+
+
+
         }
     }
 }

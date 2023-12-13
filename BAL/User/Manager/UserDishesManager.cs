@@ -63,7 +63,33 @@ namespace BAL.User.Manager
             }
         }
 
+        public object SelectDishImageById(int dishId) 
+        {
 
+
+            S1.Clear();
+            S1.Add("Id", dishId);
+            DataTable dt = new DataTable();
+            dt = dbConnet.GetDataTable(S1, "select_dishImage_byId");
+            List<DishesPro> _list = new List<DishesPro>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                _list.Add(new DishesPro
+                {
+
+                    
+                    Image = dr["Image"].ToString(),
+                   
+
+                });
+            }
+            return _list;
+
+
+
+
+
+        }
 
 
 

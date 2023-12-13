@@ -20,6 +20,7 @@ namespace Online_Food_Ordering.User
         int userid;
         int dishId;
         int categoryid;
+        int newcategoryid;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -30,6 +31,10 @@ namespace Online_Food_Ordering.User
 
                     categoryid = Convert.ToInt32(Request.QueryString["CategoryId"]);
                     object list = dishManager_obj.SelectAllDishes(categoryid);
+                    //ViewState["categoryid"] = categoryid;
+                   
+                    Session["newcategoryid"] = categoryid; // Storing in Session
+
                     DataListDishes.DataSource = list;
                     DataListDishes.DataBind();
 
@@ -67,8 +72,11 @@ namespace Online_Food_Ordering.User
                 dishManager_obj.SelectDishById(dishId);
 
                 // Logic to handle the ordering process
-                
-                AddToOrder(dishId,userid,dishManager_obj.dishProperty.Name,dishManager_obj.dishProperty.Price,categoryid);
+                // newcategoryid = (int)(ViewState["categoryid"] ?? 0); // Retrieving from ViewState
+                // Retrieving from Session
+
+
+                AddToOrder(dishId,userid,dishManager_obj.dishProperty.Name,dishManager_obj.dishProperty.Price/*,categoryid,newcategoryid*/);
             }
 
         }
@@ -131,7 +139,7 @@ namespace Online_Food_Ordering.User
 
         
 
-        private void AddToOrder(int dishId,int userid,string dishName,double dishPrice,int categoryid ) 
+        private void AddToOrder(int dishId,int userid,string dishName,double dishPrice/*,int categoryid */) 
         {
             var quantities = Session["Quantities"] as Dictionary<int, int>;
             if (quantities == null || !quantities.ContainsKey(dishId))
@@ -143,7 +151,8 @@ namespace Online_Food_Ordering.User
             int quantity = quantities[dishId];
             int qnty = quantity;
             // Create a new order
-            if (categoryid == 2001)
+            newcategoryid = (int)(Session["newcategoryid"] ?? 0);
+            if (newcategoryid == 2001)
             {
                 UserOrderProperty NorthIndianOrder = new UserOrderProperty
                 {
@@ -151,7 +160,7 @@ namespace Online_Food_Ordering.User
 
                     OrderId = GetNewOrderId(), // Generate a new order ID
                     UserId = userid, // Retrieved from the session or other means
-                                     //  OrderDate = DateTime.Now,
+                    OrderDate = DateTime.Now,
                     Item = new OrderItemProperty
                     {
                         DishId = dishId,
@@ -170,7 +179,7 @@ namespace Online_Food_Ordering.User
                 Response.Redirect("~/User/OrderDetails.Aspx");
 
             }
-            else if(categoryid == 2002)
+            else if(newcategoryid == 2002)
             {
                 UserOrderProperty SouthIndianOrder = new UserOrderProperty
                 {
@@ -178,7 +187,7 @@ namespace Online_Food_Ordering.User
 
                     OrderId = GetNewOrderId(), // Generate a new order ID
                     UserId = userid, // Retrieved from the session or other means
-                                     //  OrderDate = DateTime.Now,
+                    OrderDate = DateTime.Now,
                     Item = new OrderItemProperty
                     {
                         DishId = dishId,
@@ -191,13 +200,13 @@ namespace Online_Food_Ordering.User
                 };
 
                 // Store the order in a session
-                Session["OrderType"] = "SouthIndianDishOrder";
+                Session["OrderType"] = "SouthIndian";
                 Session["SouthIndianDishOrder"] = SouthIndianOrder;
 
                 Response.Redirect("~/User/OrderDetails.Aspx");
 
             }
-            else
+            else if(newcategoryid == 2003)
             {
                 UserOrderProperty VeganOrder = new UserOrderProperty
                 {
@@ -205,7 +214,7 @@ namespace Online_Food_Ordering.User
 
                     OrderId = GetNewOrderId(), // Generate a new order ID
                     UserId = userid, // Retrieved from the session or other means
-                                     //  OrderDate = DateTime.Now,
+                    OrderDate = DateTime.Now,
                     Item = new OrderItemProperty
                     {
                         DishId = dishId,
@@ -226,11 +235,17 @@ namespace Online_Food_Ordering.User
 
 
             }
+            else
+            {
 
+                Response.Redirect("~/User/Categories.aspx");
+
+
+            }
         }
 
 
-        private string GetNewOrderId()
+        public string GetNewOrderId()
         {
             return Guid.NewGuid().ToString();
         }
