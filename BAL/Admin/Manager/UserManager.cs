@@ -29,7 +29,8 @@ namespace BAL.Admin.Manager
                     Name = dr["Name"].ToString(),
                     Address = dr["Address"].ToString(),
                     Phone = dr["Phone"].ToString(),
-                    Email = dr["Email"].ToString()
+                    Email = dr["Email"].ToString(),
+                    Status = dr["Status"].ToString()
                    
 
                 });

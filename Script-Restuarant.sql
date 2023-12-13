@@ -49,6 +49,7 @@ Create table Orders(
 -----------------------
 alter table users add  Role varchar(20);
 select * from users
+insert into Users values('admin','Location',9874563210,'admin@gmail.com','Admin@123','A','Admin');
 
 ----------------------------Stored Procedure :- insert user--------------------
 
@@ -361,9 +362,14 @@ end
 CREATE procedure select_all_users
 as
 begin
-select Id,Name,Address,Phone,Email,Password from Users where Status='A' and Role='user'
+select Id,Name,Address,Phone,Email,Status from Users where  Role='user'
 end
 GO
+-----------------------------------------------------------------------------------
+drop proc select_all_users
+exec select_all_users
+update users set status='A' where Id=1003;
+select * from Users
 ----------------------stored procedure : block users-------------------------------
 create procedure block_user_byId
 ( 
@@ -388,7 +394,7 @@ select @result
 end
 ---------------------------------------------------------------
 select * from Users
-update users set status='A' where Id=1001
+update users set status='A' where Id=1003
 ------------------------------------------------------------------
 select *from orders
 ---------------------------------Stored Procedure: select_all_orders details-------------------
@@ -413,35 +419,5 @@ exec  select_all_orders
 --------------------------------------------------------------------------
 select * from Orders
 select * from Dishes
-insert into Orders values(1001,3004,2,250,'A');
-----------------------------------------------------------------------------
------------------------------------seslect dishes by category id--------------
-create procedure [dbo].[select_all_dishesby_Category]
-(@CategoryId as int)
-as
-begin
-select  id,Name,CategoryId,Description,Image,Price  from Dishes where CategoryId=@CategoryId and Status='A'
-end
-GO
--------------------------------------------------------------------------------------
-
-select * from Categories;
-select * from dishes;
-select * from Users;
-
-insert into users (name,address,phone,email,password,status,role)
-values('jack','hulu',+919987654533,'jacknirvanaindic@gmail.com','ASE456*()gminor','A','Admin');
--------------------------------------------------------------------------------------------------
-
--------------------------------------------select dish image by id------------------------------------
-
-create procedure select_dishImage_byId
-(@Id as int)
-as
-begin
-select  Image  from Dishes where Id=@Id and Status='A'
-end
-GO
--------------------------------------------------------------------------------------------------------------
-
-exec select_dishImage_byId @Id = 3001;
+select * from Users
+insert into Orders values(1001,3010,2,180,'A');

@@ -10,6 +10,7 @@ using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using NUnit.Core;
 
 namespace Online_Food_Ordering.Admin
 {
@@ -72,6 +73,14 @@ namespace Online_Food_Ordering.Admin
 
                         smtpClient.Send(mail);
                         LblMessage.Text = "Confirmation mail has send";
+
+
+
+
+                        //ClearOrder();
+
+
+
                     }
                 }
                 catch (Exception ex)
@@ -81,8 +90,24 @@ namespace Online_Food_Ordering.Admin
                 }
             }
         }
-        
 
-        
+        private void ClearOrder()
+        {
+           // ImageButton imbtn = sender as ImageButton;    
+           // GridViewRow grdrow = imbtn.NamingContainer as GridViewRow;         
+            //grdrow.Cells[0].Text = "";
+        }
+
+        protected void ImageBtnConfirm_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton imbtn = sender as ImageButton;
+            GridViewRow grdrow = imbtn.NamingContainer as GridViewRow;
+            grdrow.Cells[0].Text = "";
+            //grdrow.Cells.RemoveAt(8);
+            grdrow.Cells[1].Text = "";
+            grdrow.Cells[2].Text = "";
+            grdrow.Cells[3].Text = "";
+            grdrow.Cells[4].Text = "";
+        }
     }
 }

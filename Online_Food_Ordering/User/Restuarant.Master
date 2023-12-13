@@ -35,7 +35,7 @@
       
         <div id="menu" class="auto-style2">
               
-            <asp:Button ID="homebtn" runat="server" ForeColor="Black" OnClick="homebtn1_Click" style="margin-left: 15px; margin-top: 20px" Text="Home" Width="89px" /> 
+            <asp:Button ID="homebtn" runat="server" ForeColor="Black" OnClick="homebtn_Click" style="margin-left: 15px; margin-top: 20px" Text="Home" Width="89px" /> 
              <asp:Button ID="Accnbtn" runat="server" ForeColor="Black" OnClick="AccntBtn_Click" style="margin-left: 45px; margin-top: 20px" Text="Account" Width="122px" />
 
              <asp:Button ID="viewctgrybtn" runat="server" ForeColor="Black" OnClick="CtgryBtn_Click" style="margin-left: 64px; margin-top: 20px" Text="Categories" Width="107px" />
