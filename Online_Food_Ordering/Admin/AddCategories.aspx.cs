@@ -16,6 +16,12 @@ namespace Online_Food_Ordering.Admin
         string selectedCategory;
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetNoStore();
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetValidUntilExpires(true);
+
+
             if (Page.IsPostBack == false)
             {
                 Load_Categories();//for dropdown
