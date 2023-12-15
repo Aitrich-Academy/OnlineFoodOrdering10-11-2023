@@ -21,12 +21,12 @@ namespace Online_Food_Ordering
 
        protected void Button1_Click(object sender, EventArgs e)
        {
-            Response.Redirect("UserHome.aspx");
+            Response.Redirect("StartPage.aspx");
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("UserHome.aspx");
+            Response.Redirect("StartPage.aspx");
         }
     }
 }

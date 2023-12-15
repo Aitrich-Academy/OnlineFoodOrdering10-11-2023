@@ -14,7 +14,14 @@ namespace Online_Food_Ordering.User
            
 
         }
+        protected void homebtn_Click(object sender, EventArgs e)
+        {
 
+
+            Response.Redirect("~/User/UserDashBoard.aspx");
+
+
+        }
         protected void homebtn1_Click(object sender, EventArgs e)
         {
 
@@ -39,7 +46,7 @@ namespace Online_Food_Ordering.User
 
         protected void SearchBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/User/SearchDishes.aspx");
+            Response.Redirect("~/User/Search.aspx");
         }
 
         protected void LogoutBtn_Click(object sender, EventArgs e)
@@ -47,7 +54,7 @@ namespace Online_Food_Ordering.User
 
 
 
-           
+
             // Redirect to the login page
             Response.Redirect("~/User/Login.aspx");
 

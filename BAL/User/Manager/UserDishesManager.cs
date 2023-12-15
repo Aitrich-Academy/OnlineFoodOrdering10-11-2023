@@ -90,8 +90,38 @@ namespace BAL.User.Manager
 
 
         }
+        /*
+        public object SelectDishesByName(string dishname)
+        {
+            S1.Clear();
+            S1.Add("Name", dishname);
+            DataTable dt = new DataTable();
+            dt = dbConnet.GetDataTable(S1, "select_dish_by_Name");
+            List<DishesPro> _list = new List<DishesPro>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                _list.Add(new DishesPro
+                {
 
+                    Id = Convert.ToInt32(dr["Id"]),
+                    Name = dr["Name"].ToString(),
+                    CategoryId = Convert.ToInt32(dr["CategoryId"]),
+                    Description = dr["Description"].ToString(),
+                    Image = dr["Image"].ToString(),
+                    Price = Convert.ToDouble(dr["Price"])
 
-
+                });
+            }
+            return _list;
+        }
+        */
+        public DataTable SelectDishesByName(string dishname)
+        {
+            S1.Clear();
+            S1.Add("Name", dishname);
+            DataTable dt = new DataTable();
+            dt = dbConnet.GetDataTable(S1, "select_dish_by_Name");
+            return dt;
+        }
     }
 }
