@@ -28,15 +28,15 @@
             margin-left:493px;
         }
         .cntctlbl{
-            margin-top:10px;
-            color: #800000;
-          
-         font: 700 30px "Volkhov-Bold";
+      margin-top:10px;
+      color: #800000;
+    
+   font: 700 30px "Volkhov-Bold";
   
-           
-             text-align: center;
+     
+       text-align: center;
 
-        }
+  }
         .auto-style3 {
             width: 4556px;
             height: 4556px;

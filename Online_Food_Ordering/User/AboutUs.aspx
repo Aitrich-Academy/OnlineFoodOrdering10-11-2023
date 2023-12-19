@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
 
-        <div style="margin-top:150px;margin-left:979px; width: 163px;">
+        <div style="margin-top:150px;margin-left:978px; width: 163px;">
             <asp:Label ID="LblName" runat="server" Text="Nirvana Indic" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight:400;font-style:italic;font-size:28px;"></asp:Label>
         </div>
         <div  style="margin-top:65px; margin-left:840px; width:530px;">

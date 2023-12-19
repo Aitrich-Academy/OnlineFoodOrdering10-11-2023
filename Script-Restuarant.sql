@@ -1,7 +1,7 @@
 
 
 
-create database Restuarantonline
+create database Restuarant
 
 ----------User table-----------------------------------
 create table Users(
@@ -289,7 +289,7 @@ begin
 						from Dishes d 
 						JOIN Categories c ON d.CategoryId = c.Id where d.Status='A';
 end
-GO
+go
 -----------------------------------------------------
 exec select_all_dishes
 select * from Dishes
@@ -420,4 +420,50 @@ exec  select_all_orders
 select * from Orders
 select * from Dishes
 select * from Users
-insert into Orders values(1001,3010,2,180,'A');
+insert into Orders values(1001,3010,2,180,'A')
+---------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+-----------------------------------Select dishes by category id -------------------------------
+create procedure select_all_dishesby_Category
+(@CategoryId as int)
+AS
+begin
+select  Name,CategoryId,Description,Image,Price from Dishes where CategoryId=@CategoryId and Status='A'
+end
+GO
+ 
+execute  select_all_dishesby_Category @CategoryId = 2001;
+--------------------------------------------------------------------------------------------------
+--------------------------------------select image by dish id------------------------------------
+create procedure select_dishImage_byId
+(@Id as int)
+as
+begin
+select  Image  from Dishes where Id=@Id and Status='A'
+end
+GO
+-------------------------------------------------------------------------------------------------------------
+
+--------------------------------------select dishes by name for search function--------------------------------
+
+CREATE PROCEDURE select_dish_by_Name
+(@Name as varchar(50))
+AS
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM Dishes WHERE Name = @Name AND Status = 'A')
+    BEGIN
+        SELECT 0 as Id,'nil' AS Name, 0 AS CategoryId, 'nil' AS Description, 'nil' AS Image, 0.0 AS Price
+    END
+    ELSE
+    BEGIN
+        SELECT Id,Name, CategoryId, Description, Image, Price 
+        FROM Dishes 
+        WHERE Name = @Name AND Status = 'A'
+    END
+END
+GO
+
+
+execute select_dish_by_Name @Name ='samosa';
+--------------------------------------------------------------------------------------------------------------
+

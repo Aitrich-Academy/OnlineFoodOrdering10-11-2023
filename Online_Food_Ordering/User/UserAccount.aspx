@@ -161,8 +161,8 @@ margin-left:117px;
         <br />
 
     <div class="form-group">
-        <asp:Button ID="UsrAccntBtnDlte" runat="server" Text="Delete Account" Width="22%" OnClick="UsrAccntBtnDlte_Click" CssClass="dltbtn" />
-    </div>
+     <asp:Button ID="UsrAccntBtnDlte" runat="server" Text="Delete Account" Width="22%" OnClick="UsrAccntBtnDlte_Click" CssClass="dltbtn" />
+ </div>
 </div>
 
        

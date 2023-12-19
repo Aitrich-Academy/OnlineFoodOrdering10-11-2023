@@ -169,6 +169,14 @@
     <Content Include="User\AboutUs.aspx" />
     <Content Include="User\images\backButton.png" />
     <Content Include="User\images\bgstart.png" />
+    <Content Include="User\images\border-02-01-192w.png" />
+    <Content Include="User\images\decor_bg.png" />
+    <Content Include="User\images\restuarant interior 5.jpg" />
+    <Content Include="User\images\restuarant interior 6.jpg" />
+    <Content Include="User\images\restuarant interior1.jpg" />
+    <Content Include="User\images\restuarant interior2.jpg" />
+    <Content Include="User\images\restuarant interior3.jpg" />
+    <Content Include="User\images\restuarant interior4.jpg" />
     <Content Include="User\images\search.png" />
     <Content Include="User\Login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />

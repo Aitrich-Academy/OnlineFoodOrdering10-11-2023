@@ -17,39 +17,45 @@ namespace Online_Food_Ordering.User
         int id;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserID"] != null)
-            {
-                // Retrieve the user ID from session
-                int userId = Convert.ToInt32(Session["UserID"]);
-
-                // Now you can use userId to fetch user details from the database
-               DataTable dt =  UserManager_obj.GetUserDetails(userId);
-
-                if (dt != null && dt.Rows.Count > 0)
+                if (Session["UserID"] != null)
                 {
-                    DataRow row = dt.Rows[0];
-                    id = Convert.ToInt32(row["id"]);
-                    UsrAccntNmeTxtBx.Text = row["Name"].ToString();
-                    UsrAccntEmailTxtBx.Text = row["Email"].ToString();
-                    UsrAccntPhnoTxtBx.Text= row["Phone"].ToString();
-                    UsrAccntAddrssTxtBx.Text = row["Address"].ToString();
-                    UsrAccntPsswrdTxtBx.Text = row["Password"].ToString();
 
-                    
+
+                  if (!IsPostBack)
+                  {
+                    // Retrieve the user ID from session
+                    int userId = Convert.ToInt32(Session["UserID"]);
+
+                    // Now you can use userId to fetch user details from the database
+                    DataTable dt = UserManager_obj.GetUserDetails(userId);
+
+                    if (dt != null && dt.Rows.Count > 0)
+                    {
+                        DataRow row = dt.Rows[0];
+                        //id = Convert.ToInt32(row["Id"]);
+                        UsrAccntNmeTxtBx.Text = row["Name"].ToString();
+                        UsrAccntEmailTxtBx.Text = row["Email"].ToString();
+                        UsrAccntPhnoTxtBx.Text = row["Phone"].ToString();
+                        UsrAccntAddrssTxtBx.Text = row["Address"].ToString();
+                        UsrAccntPsswrdTxtBx.Text = row["Password"].ToString();
+
+
+                    }
+                  }
+
                 }
-
-
-            }
             else
             {
-               
+
                 Response.Redirect("Login.aspx");
             }
+
+
         }
 
         protected void UsrAccntBtnSbt_Click(object sender, EventArgs e)
         {
-            UserManager_obj.userdetails.Id = id;
+            UserManager_obj.userdetails.Id = Convert.ToInt32(Session["UserID"]);
 
             UserManager_obj.userdetails.Name = UsrAccntNmeTxtBx.Text.Trim().ToString();
 
