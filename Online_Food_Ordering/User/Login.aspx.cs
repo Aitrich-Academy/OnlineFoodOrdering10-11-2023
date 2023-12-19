@@ -18,7 +18,10 @@ namespace Online_Food_Ordering
      
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetNoStore();
+            Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+            Response.Cache.SetValidUntilExpires(true);
         }
 
         /* protected void LoginBtn_Click(object sender, EventArgs e)

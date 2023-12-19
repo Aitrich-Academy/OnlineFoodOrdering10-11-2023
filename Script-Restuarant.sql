@@ -117,12 +117,16 @@ BEGIN
 END
 GO
 
+<<<<<<< HEAD
 select * from users;
 
 
+=======
+>>>>>>> 16de857ce4e5fde86d20b4c1cf3cf68d0efb6660
 
+select * from users
 
-EXEC users_login @Email = 'afi@gmail.com', @Password = 'ASAmari55##123';
+EXEC users_login @Email = 'simnanoufal@gmail.com', @Password = 'Simna@123';
 ------------------------------GetUserDetails-----------------------------
 CREATE PROCEDURE GetUserDetails
     @UserId INT
