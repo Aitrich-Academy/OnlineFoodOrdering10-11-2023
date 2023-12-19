@@ -169,6 +169,14 @@
     <Content Include="User\AboutUs.aspx" />
     <Content Include="User\images\backButton.png" />
     <Content Include="User\images\bgstart.png" />
+    <Content Include="User\images\border-02-01-192w.png" />
+    <Content Include="User\images\decor_bg.png" />
+    <Content Include="User\images\restuarant interior 5.jpg" />
+    <Content Include="User\images\restuarant interior 6.jpg" />
+    <Content Include="User\images\restuarant interior1.jpg" />
+    <Content Include="User\images\restuarant interior2.jpg" />
+    <Content Include="User\images\restuarant interior3.jpg" />
+    <Content Include="User\images\restuarant interior4.jpg" />
     <Content Include="User\images\search.png" />
     <Content Include="User\Login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -242,17 +250,24 @@
     <Content Include="User\images\download.jfif" />
     <Content Include="User\images\Hariyali-Paneer-Tikka-14.jpg" />
     <Content Include="User\images\home.png" />
+    <Content Include="User\images\idliCtgry.jpg" />
+    <Content Include="User\images\idliDish.jpg" />
     <Content Include="User\images\landing page-adminANDuser.png" />
     <Content Include="User\images\letsstart.png" />
     <Content Include="User\images\logout.jpg" />
+    <Content Include="User\images\nirvana frontal image.png" />
     <Content Include="User\images\nirvana indic original logo.png" />
     <Content Include="User\images\nirvana spcl biryani.jpg" />
+    <Content Include="User\images\restaurant contact bckground.jpg" />
     <Content Include="User\images\samosa.jpg" />
     <Content Include="User\images\bg4.png" />
-    <Content Include="User\NorthIndian.aspx" />
+    <Content Include="User\images\veganCtgry.jpg" />
+    <Content Include="User\Dishes.aspx" />
+    <Content Include="User\Login.aspx" />
     <Content Include="User\Registration.aspx" />
     <Content Include="User\Search.aspx" />
     <Content Include="User\StartPage.aspx" />
+    <Content Include="User\RestaurantContact.aspx" />
     <Content Include="User\UserAccount.aspx" />
     <Content Include="User\UserDashboard.aspx" />
     <Content Include="User\UserStyle\AboutUs.css" />
@@ -260,6 +275,7 @@
     <Content Include="User\UserStyle\startpage.css" />
     <Content Include="User\UserStyle\UserStyle.css" />
     <Content Include="User\OrderDetails.aspx" />
+    <Content Include="User\Categories.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -356,12 +372,19 @@
     <Compile Include="Admin\ViewCustomers.aspx.designer.cs">
       <DependentUpon>ViewCustomers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\NorthIndian.aspx.cs">
-      <DependentUpon>NorthIndian.aspx</DependentUpon>
+    <Compile Include="User\Dishes.aspx.cs">
+      <DependentUpon>Dishes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\NorthIndian.aspx.designer.cs">
-      <DependentUpon>NorthIndian.aspx</DependentUpon>
+    <Compile Include="User\Dishes.aspx.designer.cs">
+      <DependentUpon>Dishes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
@@ -369,6 +392,13 @@
     </Compile>
     <Compile Include="User\Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\RestaurantContact.aspx.cs">
+      <DependentUpon>RestaurantContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\RestaurantContact.aspx.designer.cs">
+      <DependentUpon>RestaurantContact.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\Restuarant.Master.cs">
       <DependentUpon>Restuarant.Master</DependentUpon>
@@ -411,6 +441,13 @@
     </Compile>
     <Compile Include="User\OrderDetails.aspx.designer.cs">
       <DependentUpon>OrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

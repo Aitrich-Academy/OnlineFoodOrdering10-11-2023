@@ -20,6 +20,7 @@ namespace BAL.User.Property
         public string DishName { get; set; }
         public string Image { get; set; }
 
+        public DateTime OrderDate { get; set; }
         public int Quantity { get; set; }
         public double Price { get; set; }
         public string Status { get; set; }

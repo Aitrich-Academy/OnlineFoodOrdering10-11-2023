@@ -24,13 +24,13 @@ namespace Online_Food_Ordering
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// loginlbl control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label loginlbl;
+        protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
         /// LblMsgLgn control.
@@ -42,22 +42,22 @@ namespace Online_Food_Ordering
         protected global::System.Web.UI.WebControls.Label LblMsgLgn;
 
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// loginlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.Label loginlbl;
 
         /// <summary>
-        /// lblEmailLgn control.
+        /// loginbox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmailLgn;
+        protected global::System.Web.UI.WebControls.TextBox loginbox1;
 
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -69,22 +69,22 @@ namespace Online_Food_Ordering
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
-        /// lgntxtbox1 control.
+        /// RegularExpressionValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lgntxtbox1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
 
         /// <summary>
-        /// lblpsswrdlgn control.
+        /// loginbox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblpsswrdlgn;
+        protected global::System.Web.UI.WebControls.TextBox loginbox2;
 
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -96,15 +96,6 @@ namespace Online_Food_Ordering
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
-        /// lgntxtbox2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lgntxtbox2;
-
-        /// <summary>
         /// RegularExpressionValidator2 control.
         /// </summary>
         /// <remarks>
@@ -114,30 +105,30 @@ namespace Online_Food_Ordering
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
 
         /// <summary>
-        /// LoginBtn control.
+        /// LoginBtn1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginBtn;
+        protected global::System.Web.UI.WebControls.Button LoginBtn1;
 
         /// <summary>
-        /// lblNoAccntlgn control.
+        /// lblNoAccntlgn1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNoAccntlgn;
+        protected global::System.Web.UI.WebControls.Label lblNoAccntlgn1;
 
         /// <summary>
-        /// HyperRegister control.
+        /// HyperRegister12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperRegister;
+        protected global::System.Web.UI.WebControls.HyperLink HyperRegister12;
     }
 }

@@ -26,6 +26,24 @@
             width: 898px;
             margin-left: 142px;
         }
+         footer {
+            background-color: #2a2a2a; /* Dark gray background */
+            color: white; /* White text color */
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #f8f8f8; /* Light gray color for links */
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        footer a:hover {
+            color: #c0c0c0; /* Lighter gray for hover effect */
     </style>
 </head>
 <body id ="masterbdy">
@@ -60,6 +78,20 @@
                   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                   </asp:ContentPlaceHolder>
                 </div>
+       <!--  <footer style="background-color: #333; color: white; text-align: center; padding: 20px; position: relative; bottom: 0; width: 100%;">
+            <p>
+                <a href="AboutUs.aspx" style="color: white; margin-right: 20px;">About Us</a>
+                <a href="RestaurantContact.aspx" style="color: white; margin-right: 20px;">Contact Us</a>
+            </p>
+            <p>Follow us on social media:</p>
+            <p>
+                <a href="http://www.facebook.com/yourpage" style="color: white; margin-right: 10px;">Facebook</a>
+                <a href="http://www.twitter.com/yourpage" style="color: white; margin-right: 10px;">Twitter</a>
+                <a href="http://www.instagram.com/yourpage" style="color: white; margin-right: 10px;">Instagram</a>
+               
+            </p>
+            <p>&copy; 2023 Nirvana Indic. All rights reserved.</p>
+        </footer> -->
           </form>
        
 </body>

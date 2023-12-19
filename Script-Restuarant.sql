@@ -1,3 +1,6 @@
+
+
+
 create database Restuarant
 
 ----------User table-----------------------------------
@@ -9,6 +12,7 @@ Phone varchar(50),
 Email varchar(50),
 Password varchar(50),
 Status varchar(50)  );
+
 
 ----------Categories table-----------------------------------
 
@@ -87,21 +91,10 @@ select @result
 end
 GO
 ----------------------------Stored Procedure :- User Login--------------------
-CREATE PROCEDURE users_login
-(
-    @Email VARCHAR(50),
-    @Password VARCHAR(50)
-)
-AS
-BEGIN
-    SELECT Role
-    FROM Users
-    WHERE Email = @Email AND Password = @Password AND Status = 'A'
-END
-GO
 
 
-drop proc users_login;
+
+
 
 CREATE PROCEDURE users_login
 (
@@ -119,11 +112,17 @@ BEGIN
     ELSE
     BEGIN
         -- If the user does not exist, return a message indicating invalid credentials
-        SELECT 'Invalid credentials, please try sign up.' AS Message
+        SELECT 'invalid user' AS Role,0 as Id
     END
 END
 GO
 
+<<<<<<< HEAD
+select * from users;
+
+
+=======
+>>>>>>> 16de857ce4e5fde86d20b4c1cf3cf68d0efb6660
 
 select * from users
 
@@ -232,7 +231,7 @@ select @result
 end
 GO
 -----------------------------------------------------------
-exec  category_insert 'Vegan','Plant based food','C:\Simna\asp.net project\Restuarant App\grilledasparagus.jpg'
+
 
 select * from Categories
 ----------------------------Stored Procedure :- insert Dishes--------------------
@@ -287,14 +286,14 @@ exec select_all_category
 select * from Dishes
 
 -----------------------------------------Stored Procedure : select all dishes----------
-CREATE procedure select_all_dishes
+CREATE procedure [dbo].[select_all_dishes]
 as
 begin
  SELECT d.Id,d.Name,c.Name as CategoryName,d.Description,d.Image,d.Price
 						from Dishes d 
 						JOIN Categories c ON d.CategoryId = c.Id where d.Status='A';
 end
-GO
+go
 -----------------------------------------------------
 exec select_all_dishes
 select * from Dishes
@@ -425,4 +424,50 @@ exec  select_all_orders
 select * from Orders
 select * from Dishes
 select * from Users
-insert into Orders values(1001,3010,2,180,'A');
+insert into Orders values(1001,3010,2,180,'A')
+---------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+-----------------------------------Select dishes by category id -------------------------------
+create procedure select_all_dishesby_Category
+(@CategoryId as int)
+AS
+begin
+select  Name,CategoryId,Description,Image,Price from Dishes where CategoryId=@CategoryId and Status='A'
+end
+GO
+ 
+execute  select_all_dishesby_Category @CategoryId = 2001;
+--------------------------------------------------------------------------------------------------
+--------------------------------------select image by dish id------------------------------------
+create procedure select_dishImage_byId
+(@Id as int)
+as
+begin
+select  Image  from Dishes where Id=@Id and Status='A'
+end
+GO
+-------------------------------------------------------------------------------------------------------------
+
+--------------------------------------select dishes by name for search function--------------------------------
+
+CREATE PROCEDURE select_dish_by_Name
+(@Name as varchar(50))
+AS
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM Dishes WHERE Name = @Name AND Status = 'A')
+    BEGIN
+        SELECT 0 as Id,'nil' AS Name, 0 AS CategoryId, 'nil' AS Description, 'nil' AS Image, 0.0 AS Price
+    END
+    ELSE
+    BEGIN
+        SELECT Id,Name, CategoryId, Description, Image, Price 
+        FROM Dishes 
+        WHERE Name = @Name AND Status = 'A'
+    END
+END
+GO
+
+
+execute select_dish_by_Name @Name ='samosa';
+--------------------------------------------------------------------------------------------------------------
+
