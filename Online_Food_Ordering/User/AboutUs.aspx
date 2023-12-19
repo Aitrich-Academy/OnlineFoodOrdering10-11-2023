@@ -10,13 +10,10 @@
 <body>
     <form id="form1" runat="server">
 
-        <div style=" position: fixed;top: 0;left: 0;margin: 10px;">
-            <asp:Image ID="ImageAppLogo" runat="server" ImageUrl="~/Image/Applogo.png" Height="200px" Width="200px"/>
-        </div>
-        <div style="margin-top:150px;margin-left:1100px;">
+        <div style="margin-top:150px;margin-left:978px; width: 163px;">
             <asp:Label ID="LblName" runat="server" Text="Nirvana Indic" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight:400;font-style:italic;font-size:28px;"></asp:Label>
         </div>
-        <div  style="margin-top:25px;margin-left:920px; width:530px;">
+        <div  style="margin-top:65px; margin-left:840px; width:530px;">
             <asp:Label ID="LabelDescription" runat="server" >
                 <p style="font-family:'Comic Sans MS';font-size:16px;font-style:italic; word-spacing:4px; line-height:28px;">
                     Welcome to Nirvana Indic, where the essence of India's rich culinary heritage comes alive. Embark on a delectable journey through the vibrant flavors and aromatic spices that define our authentic Indian cuisine. At Nirvana Indic, each dish is a masterpiece, crafted with love and the finest local ingredients, inviting you to savor a taste of culinary bliss. Join us for an unforgettable dining experience, where tradition meets modern elegance, right at your table.

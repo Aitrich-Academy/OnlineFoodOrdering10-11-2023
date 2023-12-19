@@ -16,6 +16,7 @@ namespace BAL.Admin.Property
 
         public double price { get; set; }
 
+       
 
     }
 }
