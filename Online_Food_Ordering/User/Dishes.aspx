@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/Restuarant.Master" AutoEventWireup="true" CodeBehind="NorthIndian.aspx.cs" Inherits="Online_Food_Ordering.User.WebForm3" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/Restuarant.Master" AutoEventWireup="true" CodeBehind="Dishes.aspx.cs" Inherits="Online_Food_Ordering.User.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="UserStyle/UserStyle.css" rel="stylesheet" />
     <style type="text/css">
