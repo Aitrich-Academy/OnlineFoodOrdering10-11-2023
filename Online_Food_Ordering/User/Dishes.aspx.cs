@@ -1,8 +1,12 @@
 ﻿using BAL.Admin.Manager;
 using BAL.Admin.Property;
 
+
+
+
 using BAL.User.Property;
 using BAL.User.Manager;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,23 +19,30 @@ namespace Online_Food_Ordering.User
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
+
+
+       
+
        UserDishesManager dishManager_obj = new UserDishesManager();
 
         int userid;
         int dishId;
         int categoryid;
         int newcategoryid;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
             if (!Page.IsPostBack)
             {
+
                 if (Request.QueryString["CategoryId"] != null)
                 {
 
                     categoryid = Convert.ToInt32(Request.QueryString["CategoryId"]);
                     object list = dishManager_obj.SelectAllDishes(categoryid);
-                    //ViewState["categoryid"] = categoryid;
+                   
                    
                     Session["newcategoryid"] = categoryid; // Storing in Session
 
@@ -46,6 +57,7 @@ namespace Online_Food_Ordering.User
 
                 }
 
+
             }
 
 
@@ -57,26 +69,31 @@ namespace Online_Food_Ordering.User
             if (e.CommandName == "Increase")
             {
                 // Logic to increase the quantity
+
                  dishId = Convert.ToInt32(e.CommandArgument);
+
                 IncreaseQuantity(dishId);
             }
             else if (e.CommandName == "Decrease")
             {
                 // Logic to decrease the quantity
+
                dishId = Convert.ToInt32(e.CommandArgument);
+
                 DecreaseQuantity(dishId);
             }
             else if (e.CommandName == "Order")
             {
+
                 dishId = Convert.ToInt32(e.CommandArgument);
                 dishManager_obj.SelectDishById(dishId);
 
                 // Logic to handle the ordering process
-                // newcategoryid = (int)(ViewState["categoryid"] ?? 0); // Retrieving from ViewState
-                // Retrieving from Session
+                 // Retrieving from Session
 
 
-                AddToOrder(dishId,userid,dishManager_obj.dishProperty.Name,dishManager_obj.dishProperty.Price/*,categoryid,newcategoryid*/);
+                AddToOrder(dishId, userid, dishManager_obj.dishProperty.Name, dishManager_obj.dishProperty.Price/*,categoryid,newcategoryid*/);
+
             }
 
         }
@@ -137,9 +154,7 @@ namespace Online_Food_Ordering.User
                 }
             }
 
-        
-
-        private void AddToOrder(int dishId,int userid,string dishName,double dishPrice/*,int categoryid */) 
+        private void AddToOrder(int dishId, int userid, string dishName, double dishPrice/*,int categoryid */)
         {
             var quantities = Session["Quantities"] as Dictionary<int, int>;
             if (quantities == null || !quantities.ContainsKey(dishId))
@@ -179,7 +194,7 @@ namespace Online_Food_Ordering.User
                 Response.Redirect("~/User/OrderDetails.Aspx");
 
             }
-            else if(newcategoryid == 2002)
+            else if (newcategoryid == 2002)
             {
                 UserOrderProperty SouthIndianOrder = new UserOrderProperty
                 {
@@ -206,7 +221,7 @@ namespace Online_Food_Ordering.User
                 Response.Redirect("~/User/OrderDetails.Aspx");
 
             }
-            else if(newcategoryid == 2003)
+            else if (newcategoryid == 2003)
             {
                 UserOrderProperty VeganOrder = new UserOrderProperty
                 {
@@ -228,9 +243,9 @@ namespace Online_Food_Ordering.User
 
                 // Store the order in a session
                 Session["OrderType"] = "Vegan";
-                Session["VeganDishOrder"] =VeganOrder;
+                Session["VeganDishOrder"] = VeganOrder;
 
-                Response.Redirect("~/User/OrderDetails.Aspx");
+                Response.Redirect("~/User/OrderDetails.aspx");
 
 
 
@@ -251,11 +266,18 @@ namespace Online_Food_Ordering.User
         }
 
 
+
+
+
+
+
+
         protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             quantitycnfrmlbl.Visible = true;
             quantitycnfrmlbl.Text = "select your favourite dish";
         }
+
 
 
 

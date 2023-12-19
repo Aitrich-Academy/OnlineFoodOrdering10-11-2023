@@ -117,12 +117,6 @@ BEGIN
 END
 GO
 
-<<<<<<< HEAD
-select * from users;
-
-
-=======
->>>>>>> 16de857ce4e5fde86d20b4c1cf3cf68d0efb6660
 
 select * from users
 
@@ -234,6 +228,7 @@ GO
 
 
 select * from Categories
+
 ----------------------------Stored Procedure :- insert Dishes--------------------
 CREATE procedure dishes_insert
 (
